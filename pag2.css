@@ -1,0 +1,150 @@
+* {
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+}
+
+body {
+    background-color: #96c434;
+}
+
+#container {
+    width: 100%;
+    height: 633px;
+    position: relative;
+    bottom: 160px;
+    background-color: rgb(252, 252, 217);
+    border-radius: 0 130px 0 0;
+}
+
+h1 {
+    background-color: rgba(0, 255, 255, 0);
+    font-size: 50px;
+    text-align: center;
+    position: relative;
+    top: 25px;
+}
+
+.link{
+    text-decoration: none
+}
+.link:link {
+    color:#067302;
+}
+.link:visited {
+    color: #067304;
+}
+.link:hover{
+    color: black;
+    background: rgb(252, 252, 217);
+}
+.link:active {
+    color: #067302;
+}
+
+.facalog {
+    background-color: rgba(255, 77, 77, 0);
+    position: relative;
+    display: inline-block; /*deixa o container ajustado com o item*/
+    display: flex; /*ativa o flexbox para alinhar os itens*/
+    justify-content: center; /*centralizou horizontalmente*/
+    top: 25px;
+    margin-bottom:0% ;
+}
+
+.containerforms{
+    background-color: rgba(0, 0, 0, 0);
+    position: relative;
+    margin-bottom: 0px;
+    display: flex; /*ativa o flexbox para alinhar os itens*/
+    flex-direction: column; /* organiza os itens verticalmente, um embaixo do outro */
+    justify-content: center; /*centralizou horizontalmente*/
+    align-items: center; /* centraliza os itens na horizontal */
+    top: 45px;
+}
+ 
+label {
+    background-color: #96c43400;
+    position: relative;
+    right: 89px;
+    color: #067302;
+    
+}
+
+input {
+    width: 230px;
+    height: 40px;
+    border-radius: 12px;
+    background-color: #CDD1BE;
+    border: 1px solid #CDD1BE ;
+    position: relative;
+    bottom: 0px;
+}
+
+.containercheck {
+    display: flex;
+    justify-content: center;
+    position: relative;
+    top: 60px;
+}
+
+.containercheck input[type="checkbox"] {
+    width: 20px; /* Ajusta a largura da checkbox */
+    height: 16px; /* Ajusta a altura da checkbox */
+    position: relative;
+    right: 5px;
+}
+
+.check {
+    color: black;
+    position: relative;
+    left: -2px;
+
+}
+
+.container-btn {
+    display: flex;
+    justify-content: center;
+    position: relative;
+    top: 80px;
+}
+
+.btn {
+    background-color: #000000;
+    border-radius: 10px;
+    width: 230px;
+    height: 50px;
+    line-height: 50px; /* Centraliza o texto verticalmente */
+    text-align: center;
+    color: white;
+    text-decoration: none;
+    border: 1px solid #000000;
+    font-family: Arial, sans-serif; /* Garanta que a fonte seja consistente */
+    font-size: 16px; /* Ajuste conforme necessário */
+    display: flex;
+    justify-content: center; /* Centraliza horizontalmente */
+    align-items: flex-end;   /* Alinha ao fundo verticalmente */
+
+}
+
+.lkk {
+    display: flex;
+    justify-content: center;
+    position: relative;
+    top: 100px;
+}
+
+.container-img {
+    display: flex;
+    justify-content: center;
+    position: relative;
+    top: -10;
+}
+
+img {
+    height: 350px;
+    width: 355px;
+    position: relative;
+    bottom: 60px;
+   
+}

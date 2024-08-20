@@ -1,0 +1,135 @@
+* {
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+}
+
+body {
+    background-color: #96c434;
+}
+
+#container {
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    justify-content: center; /*centralizou horizontalmente*/
+    position: relative;
+    top: 40px;
+    background-color: rgb(252, 252, 217);
+    border-radius: 130px 0px 0 0;
+}
+
+h1 {
+    display: inline-block;
+    height: 50px;
+    text-align: center;
+    font-size: 50px ;
+    position: relative;
+    top: 15px;
+    left: 130px;
+}
+
+
+.containerforms{
+    background-color: rgba(0, 0, 0, 0);
+    position: relative;
+    margin: 0px;
+    display: flex; /*ativa o flexbox para alinhar os itens*/
+    flex-direction: column; /* organiza os itens verticalmente, um embaixo do outro */
+    justify-content: center; /*centralizou horizontalmente*/
+    align-items: center; /* centraliza os itens na horizontal */
+    bottom: 50px;
+    right: 248px;
+}
+ 
+label {
+    text-align: left;
+    width: 100%; /* Para garantir que o label ocupe toda a largura do contêiner */
+    font-size: 16px; /* Ajuste o tamanho da fonte conforme necessário */
+    background-color: rgba(0, 0, 255, 0);
+    color: #067302;
+    margin-bottom: 3px; /* Adiciona espaço abaixo do label */
+    font-weight: bold;
+    display: block; /* Garante que o label ocupe a largura total */
+    
+    
+}
+
+input {
+    background-color: rgba(0, 255, 255, 0);
+    width: 230px;
+    height: 40px;
+    border-radius: 12px;
+    background-color: #CDD1BE;
+    border: 1px solid #CDD1BE ;
+    
+}
+
+
+
+.container-btn {
+    background-color: #06730205;
+    display: flex;
+    justify-content: center;
+    position: relative;
+    top: 40px;
+}
+
+.btn {
+    background-color: #000000;
+    border-radius: 10px;
+    width: 230px;
+    height: 50px;
+    line-height: 50px; /* Centraliza o texto verticalmente */
+    text-align: center;
+    color: white;
+    text-decoration: none;
+    border: 1px solid #000000;
+    font-family: Arial, sans-serif; /* Garanta que a fonte seja consistente */
+    font-size: 16px; /* Ajuste conforme necessário */
+    display: flex;
+    justify-content: center; /* Centraliza horizontalmente */
+    align-items: flex-end;   /* Alinha ao fundo verticalmente */
+
+}
+
+.botao-foto {
+    font-weight: bold;
+    background-color: #CDD1BE;
+    border-radius: 10px;
+    width: 230px;
+    height: 50px;
+    line-height: 50px; /* Centraliza o texto verticalmente */
+    text-align: center;
+    color: rgb(0, 0, 0);
+    text-decoration: none;
+    border: 1px solid #ffffff;
+    font-family: Arial, sans-serif; /* Garanta que a fonte seja consistente */
+    font-size: 16px; /* Ajuste conforme necessário */
+    display: flex;
+    justify-content: center; /* Centraliza horizontalmente */
+    align-items: flex-end;   /* Alinha ao fundo verticalmente */
+}
+
+.botao-foto:hover {
+    background-color: #A8A8A8; /* Escurece um pouco no hover */
+}
+
+.container-foto {
+    display: flex;
+    justify-content: center;
+    position: relative;
+    top: 18px;
+}
+
+.img-seta {
+    margin: 0%;
+    padding: 0;
+background-color: rgba(0, 255, 255, 0);
+display: inline-block;
+}
+
+.seta {
+    width: 80px;
+    height: 80px;
+}
