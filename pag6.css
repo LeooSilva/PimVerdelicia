@@ -6,7 +6,6 @@
 
 body {
     background-color: #96c434;
-    z-index: -1;
 }
 
 
@@ -14,10 +13,9 @@ body {
         z-index: -1;
         width: 100%;
         height: 100vh;
-        position: relative;
-        top: 120px;
+        margin-top: 120px;
         background-color: rgb(252, 252, 217);
-        border-radius: 0 px 0 0;
+        border-radius: 0 130px 0 0;
     }
 
     h1 {
@@ -83,10 +81,10 @@ input {
     background-color: #06730200;
     display: flex;
     justify-content: center;
-    position: relative;
+    
     height: 50px;
     margin-top: 25px;
-    bottom: 3px;
+
 }
 
 .btn {
@@ -108,11 +106,9 @@ input {
 }
    
 .container-voini {
-    background-color: #06730200;
+    background-color: #067302;
     display: flex;
     justify-content: center;
-    position: relative;
-    height: 85px;
     margin-top: 25px;
 }
 
