@@ -23,7 +23,8 @@
             <a  class="link"  href="pag2.html">Já é registrado? Entre aqui</a>
         </div>
 
-        <div class="containerforms">
+        
+<div class="containerforms">
             <label for="nome">  Nome</label> 
             <input type="text" name="nome" id="nome">
 
@@ -41,13 +42,25 @@
             <input type="tel" name="telefone" id="telefone" placeholder="(XX) XXXXX-XXXX">
 
 
-
             <div class="container-btn">
-                <a  href="pag4.html" class="btn  text">Próximo</a>
+                <a  href="pag4.html"   id="proximoBotao" class="btn  text">Próximo</a>
                 </div>
 
         </div>
-
+        <script>
+            document.getElementById('proximoBotao').addEventListener('click', function(event) {
+                // Captura o nome do usuário
+                const userName = document.getElementById('nome').value;
+                
+                // Salva o nome no localStorage, se não estiver vazio
+                if (userName) {
+                    localStorage.setItem('userName', userName);
+                }
+        
+                // Nota: Como o link já tem um href, o redirecionamento acontece automaticamente
+            });
+        </script>
+        
 
 </body>
 </html>
