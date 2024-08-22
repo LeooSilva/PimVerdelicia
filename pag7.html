@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tela de Produtos</title>
+    <link rel="stylesheet" href="pag7.css">
+</head>
+<body>
+
+    <div class="profile-container">
+        <div class="top-bar">
+            <div class="profile-pic">
+                <img src="default-profile.png" alt="Foto de Perfil" id="profileImage">
+            </div>
+
+            <div class="user-info">
+                <span id="userName"></span>
+            </div>
+
+
+            <div class="icons">
+                <img src="img/icon_sino.png" alt="Notificações" class="icon">
+                <img src="img/ajuda_icon.png" alt="Ajuda" class="icon">
+            </div>
+        </div>
+
+        <div class="logo">
+            <img src="img/Logo_-_Verdelícia-sem.png" alt="Logo" id="logoImage">
+
+
+    <div id="container"> 
+
+        
+    </div>
+
+
+    <script>
+
+         // Função para carregar o nome do usuário do localStorage
+         function loadProfileData() {
+            const userName = localStorage.getItem('userName');
+            if (userName) {
+                document.getElementById('userName').textContent = userName;
+            }
+        }
+
+        // Executa a função quando a página é carregada
+        document.addEventListener('DOMContentLoaded', loadProfileData);
+
+
+        document.addEventListener('DOMContentLoaded', function() {
+            const profileImage = localStorage.getItem('profileImage');
+            const userName = localStorage.getItem('userName');
+    
+            if (profileImage) {
+                document.getElementById('profileImage').src = profileImage;
+            }
+    
+            if (userName) {
+                document.getElementById('userName').textContent = userName;
+            }
+        });
+    </script>
+    
+
+</body>
+</html>
