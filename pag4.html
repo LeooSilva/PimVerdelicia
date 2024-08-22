@@ -45,10 +45,40 @@
                 </div>
 
                 <script>
+                    // Adiciona um evento para o botão de upload da foto
                     document.getElementById('botaoFoto').addEventListener('click', function() {
                         document.getElementById('uploadFoto').click();
                     });
+                
+                    // Quando uma nova foto é carregada, armazena no localStorage
+                    document.getElementById('uploadFoto').addEventListener('change', function(event) {
+                        const reader = new FileReader();
+                        reader.onload = function(){
+                            localStorage.setItem('profileImage', reader.result);
+                        }
+                        reader.readAsDataURL(event.target.files[0]);
+                    });
+                
+                    // Quando o botão para salvar o nome é clicado, armazena o nome no localStorage
+                    document.querySelector('.container-btn a').addEventListener('click', function() {
+                        const userName = document.getElementById('nome').value;
+                        localStorage.setItem('userName', userName);
+                    });
+                
+                    // Função para carregar o nome em qualquer página
+                    function loadProfileData() {
+                        const userName = localStorage.getItem('userName');
+                        
+                        if (userName) {
+                            document.getElementById('userName').textContent = userName;
+                        }
+                    }
+                
+                    // Carrega o nome quando a página é carregada
+                    document.addEventListener('DOMContentLoaded', loadProfileData);
                 </script>
+                
+                
                 
     </div>
 </body>
