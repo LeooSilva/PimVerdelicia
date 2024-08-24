@@ -116,7 +116,7 @@ span {
     color: white;
     font-size: 14px;
     text-align: center;
-    margin-top: 5px;
+    margin-top: 3px;
 } 
 
 .containerprodutos {
@@ -306,3 +306,13 @@ bottom: 0px;
     position: relative;
     right:-6px;
 }
+.icon-item a {
+    text-decoration: none;
+    color: inherit; /* Mantém a cor do texto igual ao do seu elemento pai */
+  }
+  
+  /* Ajuste a cor do texto, se necessário */
+  .icon-item a p {
+    color: #ffffff; /* Ou a cor que preferir */
+  }
+  
