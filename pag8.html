@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tela De Produtos</title>
+    <link rel="stylesheet" href="pag8.css">
+</head>
+<body>
+    <div class="profile-container">
+        <div class="top-bar">
+            <div class="profile-pic">
+                <img src="default-profile.png" alt="Foto de Perfil" id="profileImage">
+            </div>
+
+            <div class="user-info">
+                <span id="userName"></span>
+            </div>
+
+
+            <div class="icons1">
+                <img src="img/icon_sino.png" alt="Notificações" class="icon1">
+                <img src="img/ajuda_icon.png" alt="Ajuda" class="icon1">
+            </div>
+        </div>
+
+        <div class="logo">
+            <img src="img/Logo_-_Verdelícia-sem.png" alt="Logo" id="logoImage">
+
+
+
+            <div id="container"> 
+ 
+               
+        
+            
+
+                    <div class="containerprodutos">
+                    <div class="produtos">
+
+                        <p class="pp">Alface<br> <span>R$ 4,00</span></p>
+                        <div class="product-controls">
+                            <button class="minus"><span class="sub">-</span></button>
+                            <span class="quantity">0</span>
+                            <button class="plus"><span class="sub1">+</span></button>
+                        </div>
+                        <div class="containeralface">
+                        <img class="imgalface" src="img/alface128.png" alt="">
+                        </div>
+                    </div>
+
+                    <div class="produtos">
+                        <p class="ppl">Limão <br> <span class="span1">R$ 2,00</span></p>
+                        <div class="product-controls">
+                            <button class="minus1"><span class="sub">-</span></button>
+                            <span class="quantity1">0</span>
+                            <button class="plus1"><span class="sub1">+</span></button>
+                        </div>
+                        <div class="containerlim">
+                        <img class="imglim" src="img/limao128.png" alt="">
+                        </div>
+                    </div>
+
+                    <div class="produtos">
+                        <p class="ppp">Pepino <br> <span class="span2">R$ 2,00</span></p>
+                        <div class="product-controls">
+                            <button class="minus2"><span class="sub">-</span></button>
+                            <span class="quantity2">0</span>
+                            <button class="plus2"><span class="sub1">+</span></button>
+                        </div>
+                        <div class="containerpep">
+                        <img class="imgpep" src="img/pepino128.png" alt="">
+                        </div>
+                    </div>
+
+                    <div class="produtos">
+                        <p class="ppk"> Kiwi <br> <span class="span3">R$ 2,00</span></p>
+                        <div class="product-controls">
+                            <button class="minus3"><span class="sub">-</span></button>
+                            <span class="quantity3">0</span>
+                            <button class="plus3"><span class="sub1">+</span></button>
+                        </div>
+                        <div class="containerkiw">
+                        <img class="imgkiw" src="img/kiwi128.png" alt="">
+                        </div>
+                    </div>
+                </div>
+
+                <div class="container-btn">
+                    <a  href="pag9.html" class="btn  text">Próximo</a>
+                    </div>
+
+
+                    <div class="containerbarra">
+                        <div class="icon-container">
+                            <div class="icon-item">
+                                <a href="pag9.html">
+                                    <img class="icon" src="img/forma-do-usuario.png" alt="usuário">
+                                    <p>Perfil</p>
+                                </a>
+                            </div>
+                            <div class="icon-item">
+                                <a href="pag12.html">
+                                    <img class="icon" src="img/carrinho-de-compras.png" alt="carrinho de compras">
+                                    <p>Carrinho</p>
+                                </a>
+                            </div>
+                            <div class="icon-item">
+                                <a href="pag7.html">
+                                    <img class="icon" src="img/casa.png" alt="home">
+                                    <p>Home</p>
+                                </a>
+                            </div>
+                            <div class="icon-item">
+                                <a href="pag19.html">
+                                    <img class="icon" src="img/silhueta-de-caminhao-de-entrega.png" alt="caminhão">
+                                    <p>Fornecedor</p>
+                                </a>
+                            </div>
+                            <div class="icon-item">
+                                <a href="pag23.html">
+                                    <img class="icon" src="img/silhueta-em-forma-de-coracao.png" alt="feedback">
+                                    <p>Feedback</p>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    
+        
+        </div>
+        
+        
+            </div>
+        
+        
+            <script>
+        
+                 // Função para carregar o nome do usuário do localStorage
+                 function loadProfileData() {
+                    const userName = localStorage.getItem('userName');
+                    if (userName) {
+                        document.getElementById('userName').textContent = userName;
+                    }
+                }
+        
+                // Executa a função quando a página é carregada
+                document.addEventListener('DOMContentLoaded', loadProfileData);
+        
+        
+                document.addEventListener('DOMContentLoaded', function() {
+                    const profileImage = localStorage.getItem('profileImage');
+                    const userName = localStorage.getItem('userName');
+            
+                    if (profileImage) {
+                        document.getElementById('profileImage').src = profileImage;
+                    }
+            
+                    if (userName) {
+                        document.getElementById('userName').textContent = userName;
+                    }
+                });
+
+                const controls = [
+    { minus: '.minus1', plus: '.plus1', quantity: '.quantity1' },
+    { minus: '.minus2', plus: '.plus2', quantity: '.quantity2' },
+    { minus: '.minus3', plus: '.plus3', quantity: '.quantity3' },
+    { minus: '.minus4', plus: '.plus4', quantity: '.quantity4' }
+];
+
+controls.forEach(function(control) {
+    const minusButton = document.querySelector(control.minus);
+    const plusButton = document.querySelector(control.plus);
+    const quantitySpan = document.querySelector(control.quantity);
+
+    minusButton.addEventListener('click', function() {
+        let quantity = parseInt(quantitySpan.textContent);
+        if (quantity > 0) {
+            quantity--;
+            quantitySpan.textContent = quantity;
+        }
+    });
+
+    plusButton.addEventListener('click', function() {
+        let quantity = parseInt(quantitySpan.textContent);
+        quantity++;
+        quantitySpan.textContent = quantity;
+    });
+});
+
+
+            </script>
+            
+</body>
+</html>
