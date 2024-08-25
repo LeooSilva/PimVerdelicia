@@ -1,0 +1,200 @@
+dir<!DOCTYPE html>
+<html lang="pt]">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tela de Perfil</title>
+    <link rel="stylesheet" href="pag9.css">
+</head>
+<body>
+    <div class="img-seta">
+        <a href="pag7.html">
+            <img class="seta" src="img/seta-startup.png" alt="Descrição da Seta">
+        </a>
+
+        <div class="containerh1">
+            <h1>Perfil</h1>
+        </div>
+    </div>
+
+    <div id="container">
+        <div class="profile-container">
+            <div class="top-bar">
+                <div class="profile-pic">
+                    <img src="default-profile.png" alt="Foto de Perfil" id="profileImage">
+                </div>
+    
+                <div class="user-info">
+                    <span id="userName"></span>
+                </div>
+
+                <div class="sobre">
+
+                    <h4>Sobre mim</h4>
+                    <p  id="nomePerfil" >Nome</p>
+                    <p class="ape" >Nome</p>
+                    <img class="iconsobre" src="img/do-utilizador.png" alt="icone perfil">
+                    <hr>
+                    <p   id="emailPerfil" >Endereço de email</p>
+                    <p class="ape1" >Endereço de email</p>
+                    <img  class="iconsobre" src="img/o-email.png" alt="icone email">
+                    <hr>
+                    <p   id="telefonePerfil" >Número de telefone</p>
+                    <p class="ape2" >Número de telefone</p>
+                    <img class="iconsobre"  src="img/lista-telefonica.png" alt="icone telefone">
+                    <hr>
+                    <p  id="enderecoPerfil" >Endereço</p>
+                    <p class="ape3" >Endereço</p>
+                    <img  class="iconsobre" src="img/placeholder.png" alt="icone localização">
+
+                    <div class="sobre1">
+                    <h4 class="config">Configurações</h4>
+                    <p class="ape4" >Modo Silencioso</p>
+                    <p class="noti">Notificação e mensagem</p>
+                    <div class="switch">
+                        <input type="checkbox" id="toggle1">
+                        <label for="toggle1"></label>
+                      </div>
+                      
+                      <div class="switch second-switch">
+                        <input type="checkbox" id="toggle2" checked>
+                        <label for="toggle2"></label>
+                      </div>
+                      
+                    <hr class="linhahor">
+                        <img class="iconsobre1" src="img/volume.png" alt="som">
+                        <p class="autorizações">Camera, localização e microfone </p>
+                        <p class="ape5">Permissões</p>
+                        <img class="iconsobre1" src="img/smartphone.png" alt="foto smartphone">
+
+
+                    </div>
+
+                </div>
+
+
+
+
+
+
+                <div class="containerbarra">
+                    <div class="icon-container">
+                        <div class="icon-item">
+                            <a href="pag9.html">
+                                <img class="icon" src="img/forma-do-usuario.png" alt="usuário">
+                                <p class="pbarra" >Perfil</p>
+                            </a>
+                        </div>
+                        <div class="icon-item">
+                            <a href="pag12.html">
+                                <img class="icon" src="img/carrinho-de-compras.png" alt="carrinho de compras">
+                                <p class="pbarra">Carrinho</p>
+                            </a>
+                        </div>
+                        <div class="icon-item">
+                            <a href="pag7.html">
+                                <img class="icon" src="img/casa.png" alt="home">
+                                <p class="pbarra" >Home</p>
+                            </a>
+                        </div>
+                        <div class="icon-item">
+                            <a href="pag19.html">
+                                <img class="icon" src="img/silhueta-de-caminhao-de-entrega.png" alt="caminhão">
+                                <p class="pbarra" >Fornecedor</p>
+                            </a>
+                        </div>
+                        <div class="icon-item">
+                            <a href="pag23.html">
+                                <img class="icon" src="img/silhueta-em-forma-de-coracao.png" alt="feedback">
+                                <p class="pbarra" >Feedback</p>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+    </div>
+
+    <script>
+
+
+
+
+
+// Ativando o modo silencioso
+document.getElementById('toggle1').addEventListener('change', function() {
+  if (this.checked) {
+    // Ativar o modo silencioso
+    console.log('Modo silencioso ativado');
+    // Aqui você poderia adicionar a lógica para silenciar as notificações e mensagens
+  } else {
+    // Desativar o modo silencioso
+    console.log('Modo silencioso desativado');
+  }
+});
+
+// Ativando permissões de câmera, localização e microfone
+document.getElementById('toggle2').addEventListener('change', function() {
+  if (this.checked) {
+    // Ativar permissões
+    console.log('Permissões de câmera, localização e microfone ativadas');
+    // Aqui você poderia adicionar a lógica para solicitar essas permissões
+  } else {
+    // Desativar permissões
+    console.log('Permissões de câmera, localização e microfone desativadas');
+  }
+});
+
+
+    document.addEventListener('DOMContentLoaded', function() {
+        const nome = localStorage.getItem('nome');
+        const email = localStorage.getItem('email');
+        const telefone = localStorage.getItem('telefone');
+        const endereco = localStorage.getItem('endereço');
+
+        if (nome) {
+            document.getElementById('nomePerfil').textContent = nome;
+        }
+
+        if (email) {
+            document.getElementById('emailPerfil').textContent = email;
+        }
+
+        if (telefone) {
+            document.getElementById('telefonePerfil').textContent = telefone;
+        }
+
+        if (endereco) {
+            document.getElementById('enderecoPerfil').textContent = endereco;
+        }
+    });
+
+
+        
+        // Função para carregar o nome do usuário do localStorage
+        function loadProfileData() {
+           const userName = localStorage.getItem('userName');
+           if (userName) {
+               document.getElementById('userName').textContent = userName;
+           }
+       }
+
+       // Executa a função quando a página é carregada
+       document.addEventListener('DOMContentLoaded', loadProfileData);
+
+
+       document.addEventListener('DOMContentLoaded', function() {
+           const profileImage = localStorage.getItem('profileImage');
+           const userName = localStorage.getItem('userName');
+   
+           if (profileImage) {
+               document.getElementById('profileImage').src = profileImage;
+           }
+   
+           if (userName) {
+               document.getElementById('userName').textContent = userName;
+           }
+       });
+   </script>
+
+</body>
+</html>
