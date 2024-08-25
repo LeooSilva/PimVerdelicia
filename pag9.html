@@ -51,6 +51,16 @@
                     <h4 class="config">Configurações</h4>
                     <p class="ape4" >Modo Silencioso</p>
                     <p class="noti">Notificação e mensagem</p>
+                    <div class="switch">
+                        <input type="checkbox" id="toggle1">
+                        <label for="toggle1"></label>
+                      </div>
+                      
+                      <div class="switch second-switch">
+                        <input type="checkbox" id="toggle2" checked>
+                        <label for="toggle2"></label>
+                      </div>
+                      
                     <hr class="linhahor">
                         <img class="iconsobre1" src="img/volume.png" alt="som">
                         <p class="autorizações">Camera, localização e microfone </p>
@@ -105,6 +115,34 @@
     </div>
 
     <script>
+
+
+
+
+
+// Ativando o modo silencioso
+document.getElementById('toggle1').addEventListener('change', function() {
+  if (this.checked) {
+    // Ativar o modo silencioso
+    console.log('Modo silencioso ativado');
+    // Aqui você poderia adicionar a lógica para silenciar as notificações e mensagens
+  } else {
+    // Desativar o modo silencioso
+    console.log('Modo silencioso desativado');
+  }
+});
+
+// Ativando permissões de câmera, localização e microfone
+document.getElementById('toggle2').addEventListener('change', function() {
+  if (this.checked) {
+    // Ativar permissões
+    console.log('Permissões de câmera, localização e microfone ativadas');
+    // Aqui você poderia adicionar a lógica para solicitar essas permissões
+  } else {
+    // Desativar permissões
+    console.log('Permissões de câmera, localização e microfone desativadas');
+  }
+});
 
 
     document.addEventListener('DOMContentLoaded', function() {
