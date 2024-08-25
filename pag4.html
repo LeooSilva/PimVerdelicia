@@ -45,6 +45,22 @@
                 </div>
 
                 <script>
+
+document.querySelector('.container-btn a').addEventListener('click', function() {
+        // Captura os valores dos campos do formulário
+        var endereco = document.getElementById('endereço').value;
+        var complemento = document.getElementById('complemento').value;
+        var cep = document.getElementById('CEP').value;
+        var cpf = document.getElementById('CPF').value;
+
+        // Salva os valores no localStorage
+        localStorage.setItem('endereço', endereco);
+        localStorage.setItem('complemento', complemento);
+        localStorage.setItem('cep', cep);
+        localStorage.setItem('cpf', cpf);
+    });
+
+
                     document.getElementById('botaoFoto').addEventListener('click', function() {
                         document.getElementById('uploadFoto').click();
                     });
@@ -53,3 +69,4 @@
     </div>
 </body>
 </html>
+
