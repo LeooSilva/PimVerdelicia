@@ -1,0 +1,99 @@
+* {
+    margin: 0;
+    padding: 0;
+    overflow: visible;
+}
+
+body {
+    background-color: #96c434;
+    overflow: hidden; /* Evita rolagem no contêiner */
+}
+
+#container {
+    width: 100%;
+    height: 100vh;
+    position: fixed;
+    display: flex;
+    justify-content: center; /*centralizou horizontalmente*/
+    background-color: rgb(252, 252, 217);
+    border-radius: 0 130px 0 0;
+    overflow: hidden; /* Evita rolagem no contêiner */
+}
+.img-seta {
+    margin: 0%;
+    padding: 0;
+background-color: rgba(0, 255, 255, 0);
+display: inline;
+position: relative;
+top: 10px;
+}
+
+.seta {
+    width: 80px;
+    height: 80px;
+}
+
+.pvolta {
+    position: relative;
+    left: 65px;
+    top: -59px;
+    color: white;
+    font-size: 18px;
+}
+
+/* Barra inferior */
+.containerbarra {
+    width: 100%;
+    height: 60px;
+    background-color: #007808;
+    position: absolute;
+    top: 75%;
+    right:0px;
+}
+
+.icon-container {
+    display: flex;
+    justify-content: space-around;
+    width: 100%;
+}
+
+.icon-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.icon {
+    width: 25px;
+    height: 34px;
+    margin-top: 1px;
+    padding-top: 2px;
+    position: relative;
+    top:  px;
+    left: 1px;
+
+}
+
+.icon + p {
+    color: white;
+    font-size: 14px;
+    text-align: center;
+    margin-top: -40px;
+}
+
+.pbarra {
+    position: relative;
+    top: 37px;
+}
+
+/* Remove o sublinhado e a cor azul dos links dentro dos ícones */
+.icon-item a {
+    text-decoration: none;
+    color: inherit; /* Mantém a cor do texto igual ao do seu elemento pai */
+  }
+  
+  /* Ajuste a cor do texto, se necessário */
+  .icon-item a p {
+    color: #ffffff; /* Ou a cor que preferir */
+  }
+  
