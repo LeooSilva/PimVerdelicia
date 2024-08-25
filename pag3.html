@@ -48,6 +48,25 @@
 
         </div>
 
+        <script>
+            
+    document.querySelector('.container-btn a').addEventListener('click', function() {
+        // Captura os valores dos campos do formulário
+        var nome = document.getElementById('nome').value;
+        var email = document.getElementById('email').value;
+        var telefone = document.getElementById('telefone').value;
+        var endereco = document.getElementById('endereco') ? document.getElementById('endereco').value : '';
 
+        // Salva os valores no localStorage
+        localStorage.setItem('nome', nome);
+        localStorage.setItem('email', email);
+        localStorage.setItem('telefone', telefone);
+        localStorage.setItem('endereco', endereco);
+    });
+
+
+        </script>
+        
 </body>
 </html>
+
