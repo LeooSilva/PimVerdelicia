@@ -17,11 +17,14 @@
                 <span id="userName"></span>
             </div>
 
-
-            <div class="icons1">
+           <div class="icons1">
                 <img src="img/icon_sino.png" alt="Notificações" class="icon1">
-                <img src="img/ajuda_icon.png" alt="Ajuda" class="icon1">
+                <a href="pag10.html">
+                    <img src="img/ajuda_icon.png" alt="Ajuda" class="icon1">
+                </a> 
             </div>
+            
+
         </div>
 
         <div class="logo">
@@ -38,30 +41,50 @@
                     <div class="containerprodutos">
                     <div class="produtos">
 
-                        <p class="pp">Alface Americano <br> <span>R$ 4,00</span></p>
+                        <p class="pp">Alface <br> <span>R$ 4,00</span></p>
                         <div class="containeralface">
                         <img class="imgalface" src="img/alface (1).png" alt="">
+                        </div>
+                        <div class="product-controls">
+                            <button class="minus">-</button>
+                            <span class="quantity">0</span>
+                            <button class="plus">+</button>
                         </div>
                     </div>
 
                     <div class="produtos">
                         <p class="ppl">Limão <br> <span class="span1">R$ 2,00</span></p>
                         <div class="containerlim">
-                        <img class="imglim" src="img/lima.png" alt="">
+                        <img class="imglim" src="img/limao128.png" alt="">
+                        </div>
+                        <div class="product-controls">
+                            <button class="minus">-</button>
+                            <span class="quantity">0</span>
+                            <button class="plus">+</button>
                         </div>
                     </div>
 
                     <div class="produtos">
                         <p class="ppp">Pepino <br> <span class="span2">R$ 2,00</span></p>
                         <div class="containerpep">
-                        <img class="imgpep" src="img/pepino.png" alt="">
+                        <img class="imgpep" src="img/pepino128.png" alt="">
+                        </div>
+                        <div class="product-controls">
+                            <button class="minus">-</button>
+                            <span class="quantity">0</span>
+                            <button class="plus">+</button>
                         </div>
                     </div>
 
                     <div class="produtos">
                         <p class="ppk"> Kiwi <br> <span class="span3">R$ 2,00</span></p>
                         <div class="containerkiw">
-                        <img class="imgkiw" src="img/kiwi.png" alt="">
+                        <img class="imgkiw" src="img/kiwi128.png" alt="">
+                        </div>
+                        <div class="product-controls">
+                            <button class="minus">-</button>
+                            <span class="quantity">0</span>
+                            <button class="plus">+</button>
                         </div>
                     </div>
                 </div>
@@ -113,6 +136,28 @@
         
         
             <script>
+
+
+document.querySelectorAll('.product-controls').forEach(function(control) {
+    const minusButton = control.querySelector('.minus');
+    const plusButton = control.querySelector('.plus');
+    const quantitySpan = control.querySelector('.quantity');
+    
+    minusButton.addEventListener('click', function() {
+        let quantity = parseInt(quantitySpan.textContent);
+        if (quantity > 0) {
+            quantity--;
+            quantitySpan.textContent = quantity;
+        }
+    });
+
+    plusButton.addEventListener('click', function() {
+        let quantity = parseInt(quantitySpan.textContent);
+        quantity++;
+        quantitySpan.textContent = quantity;
+    });
+});
+
         
                  // Função para carregar o nome do usuário do localStorage
                  function loadProfileData() {

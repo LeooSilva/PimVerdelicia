@@ -168,6 +168,7 @@ span {
 .imgalface {
     border-radius: 10px;
     height: 40px;
+    width: 40px;
     background-color: white;
     border-radius: 20px;
 }
@@ -183,27 +184,28 @@ span {
     border-radius: 20px; /* Aplica bordas arredondadas ao contêiner */
     box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.1); /* Adiciona uma sombra leve ao contêiner */
     position: relative;
-    right: 150px;
+    right: 80px;
     bottom: 20px;
 }
 
 .pp {
     color: white;
 position: relative;
-left: 40px;
+left: 30px;
 bottom: 0px;
 }
 
 span {
     font-size: 13px;
     position: relative;
-    right:40px;
+    right:0px;
 }
 
 
 .imglim {
     border-radius: 10px;
     height: 40px;
+    width: 40px;
     background-color: white;
     border-radius: 20px;
 }
@@ -219,14 +221,14 @@ span {
     border-radius: 20px; /* Aplica bordas arredondadas ao contêiner */
     box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.1); /* Adiciona uma sombra leve ao contêiner */
     position: relative;
-    right: 110px;
-    bottom: 20px;
+    right: 80px;
+        bottom: 20px;
 }
 
 .ppl {
     color: white;
 position: relative;
-left: 0px;
+left: 30px;
 bottom: 0px;
 }
 
@@ -240,6 +242,7 @@ bottom: 0px;
 .imgpep{
     border-radius: 10px;
     height: 40px;
+    width: 40px;
     background-color: white;
     border-radius: 20px;
 }
@@ -255,14 +258,14 @@ bottom: 0px;
     border-radius: 20px; /* Aplica bordas arredondadas ao contêiner */
     box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.1); /* Adiciona uma sombra leve ao contêiner */
     position: relative;
-    right: 110px;
+    right: 80px;
     bottom: 20px;
 }
 
 .ppp {
     color: white;
 position: relative;
-left: 5px;
+left: 35px;
 bottom: 0px;
 }
 
@@ -275,6 +278,7 @@ bottom: 0px;
 .imgkiw{
     border-radius: 10px;
     height: 40px;
+    width: 40px;
     background-color: white;
     border-radius: 20px;
 }
@@ -290,21 +294,21 @@ bottom: 0px;
     border-radius: 20px; /* Aplica bordas arredondadas ao contêiner */
     box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.1); /* Adiciona uma sombra leve ao contêiner */
     position: relative;
-    right: 110px;
+    right: 80px;
     bottom: 20px;
 }
 
 .ppk {
 color: white;
 position: relative;
-left: -6px;
+left: 20px;
 bottom: 0px;
 }
 
 .span3{
     font-size: 13px;
     position: relative;
-    right:-6px;
+    right:-7px;
 }
 .icon-item a {
     text-decoration: none;
@@ -316,3 +320,77 @@ bottom: 0px;
     color: #ffffff; /* Ou a cor que preferir */
   }
   
+
+  .product {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0px;
+    background-color: #A6D785;
+    border-radius: 10px;
+    margin-bottom: 10px;
+}
+
+.product-info {
+    display: flex;
+    align-items: center;
+}
+
+.product-info img {
+    width: 20px;
+    height: 20px;
+    margin-right: 10px;
+    border-radius: 50%;
+}
+
+.product-controls {
+    display: flex;
+    align-items: center;
+}
+
+.product-controls button {
+    background-color: #FFFFFF;
+    border: 1px solid #ccc;
+    padding: 5px 10px;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+.product-controls .quantity {
+    margin: 0 10px;
+    width: 20px;
+    text-align: center;
+}
+
+
+.minus, .plus {
+    width: 20px;
+    height: 20px;
+    text-align: center;
+    line-height: 20px; /* Centraliza verticalmente */
+    background-color: #FFFFFF;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    cursor: pointer;
+    position: relative;
+    left: 15px; /* Manter o deslocamento original */
+    top: 10px;
+    padding: 0; /* Remover qualquer padding adicional */
+    display: flex;
+    align-items: center; /* Centraliza verticalmente */
+    justify-content: center; /* Centraliza horizontalmente */
+}
+
+.quantity {
+    position: relative;
+    left: 22px; /* Manter o deslocamento original */
+    top: 10px;
+    width: 20px;
+    text-align: center;
+    line-height: 20px; /* Centraliza verticalmente o número */
+}
+
+.minus{
+    position: relative;
+    left: 30px;
+}
