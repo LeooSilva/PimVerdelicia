@@ -1,0 +1,170 @@
+ls * {
+    margin: 0;
+    padding: 0;
+    overflow: visible;
+}
+
+body {
+    background-color: #96c434;
+    overflow: hidden; /* Evita rolagem no contêiner */
+}
+
+#container {
+    width: 101%;
+    height: 100vh;
+    position: fixed;
+    display: flex;
+    justify-content: center; /*centralizou horizontalmente*/
+    background-color: rgb(252, 252, 217);
+    border-radius: 130px 0 0 0;
+    overflow: hidden; /* Evita rolagem no contêiner */
+    margin-top: -20px;
+    margin-left: -20px;
+}
+.img-seta {
+    margin: 0%;
+    padding: 0;
+background-color: rgba(0, 255, 255, 0);
+display: inline;
+position: relative;
+top: -5px;
+}
+
+.seta {
+    width: 80px;
+    height: 80px;
+}
+
+
+/* Barra inferior */
+.containerbarra {
+    width: 600%;
+    height: 60px;
+    background-color: #007808;
+    position: absolute;
+    top: 88%;
+    right:-610px;
+}
+
+.icon-container {
+    display: flex;
+    justify-content: space-around;
+    width: 100%;
+}
+
+.icon-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.icon {
+    width: 25px;
+    height: 34px;
+    margin-top: 1px;
+    padding-top: 2px;
+    position: relative;
+    top:  px;
+    left: 1px;
+
+}
+
+.icon + p {
+    color: white;
+    font-size: 14px;
+    text-align: center;
+    margin-top: -40px;
+}
+
+.pbarra {
+    position: relative;
+    top: 40px;
+}
+
+/* Remove o sublinhado e a cor azul dos links dentro dos ícones */
+.icon-item a {
+    text-decoration: none;
+    color: inherit; /* Mantém a cor do texto igual ao do seu elemento pai */
+  }
+  
+  /* Ajuste a cor do texto, se necessário */
+  .icon-item a p {
+    color: #ffffff; /* Ou a cor que preferir */
+  }
+  h1{
+    font-size: 50px;
+    color: #96c434;
+    position: relative;
+    left: 150px;
+    bottom: 30px;
+  }
+  .containerforms{
+    background-color: rgba(0, 0, 0, 0);
+    position: relative;
+    margin: 0px;
+    display: flex; /*ativa o flexbox para alinhar os itens*/
+    flex-direction: column; /* organiza os itens verticalmente, um embaixo do outro */
+    justify-content: center; /*centralizou horizontalmente*/
+    align-items: center; /* centraliza os itens na horizontal */
+    bottom: 50px;
+    right: 108px;
+}
+ 
+label {
+    text-align: left;
+    width: 100%; /* Para garantir que o label ocupe toda a largura do contêiner */
+    font-size: 16px; /* Ajuste o tamanho da fonte conforme necessário */
+    background-color: rgba(0, 0, 255, 0);
+    color: #000000;
+    margin-bottom: 3px; /* Adiciona espaço abaixo do label */
+    font-weight: bold;
+    display: block; /* Garante que o label ocupe a largura total */
+    
+    
+}
+
+input {
+    background-color: rgba(0, 255, 255, 0);
+    width: 230px;
+    height: 40px;
+    border-radius: 12px;
+    background-color: #CDD1BE;
+    border: 1px solid #CDD1BE ;
+    
+}
+
+.container-btn {
+    background-color: #06730205;
+    display: flex;
+    justify-content: center;
+    position: relative;
+    margin-top: -65px;
+    top: 85px;
+}
+
+.btn {
+    background-color: #000000;
+    border-radius: 10px;
+    width: 230px;
+    height: 50px;
+    line-height: 50px; /* Centraliza o texto verticalmente */
+    text-align: center;
+    color: white;
+    text-decoration: none;
+    border: 1px solid #000000;
+    font-family: Arial, sans-serif; /* Garanta que a fonte seja consistente */
+    font-size: 16px; /* Ajuste conforme necessário */
+    display: flex;
+    justify-content: center; /* Centraliza horizontalmente */
+    align-items: flex-end;   /* Alinha ao fundo verticalmente */
+
+}
+
+.cartao {
+    background-color: #00000000;
+    height: 80px;
+    width: auto;
+    position: relative;
+    top: 60px;
+    left:35px ;
+}
