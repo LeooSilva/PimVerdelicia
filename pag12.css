@@ -25,6 +25,7 @@ body {
     display: flex;
     justify-content: space-around;
     width: 100%;
+    transition: transform 300ms ease-in-out, box-shadow 300ms ease-in-out;
 }
 
 .icon-item {
@@ -41,7 +42,7 @@ body {
     position: relative;
     top:  px;
     left: 1px;
-
+    transition: transform 300ms ease-in-out, box-shadow 300ms ease-in-out;
 }
 
 .icon + p {
@@ -71,6 +72,11 @@ body {
     align-items: center;
     justify-content: center;/
 }
+.icon-item:hover .icon {
+    transform: scale(1.1); /* Aumenta o tamanho do ícone em 10% no hover */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Adiciona uma sombra preta com leve desfoque */
+  }
+  
 
 
 h1{
@@ -79,6 +85,7 @@ h1{
     left: 200px;
     color: #96c434;
     font-size: 60px;
+    animation: colorAndGrow 2s ease-in-out forwards; /* Animação de 2 segundos */
 }
 
 .container-btn {
@@ -107,7 +114,13 @@ h1{
     display: flex;
     justify-content: center; /* Centraliza horizontalmente */
     align-items: flex-end;   /* Alinha ao fundo verticalmente */
-
+    transition: box-shadow 300ms ease-in-out, background-color 300ms ease-in-out;
+    animation: Grow 2s ease-in-out forwards; /* Animação de 2 segundos */
+}
+.btn:hover {
+    box-shadow: 0 0 40px 40px rgba(15, 15, 15, 0.7) inset; /* Sombra com tom vermelho */
+    background-color: #5c5c5c; /* Tonalidade um pouco mais clara de preto */
+    transform: scale(1.05); /* Aumenta o tamanho do botão em 5% */
 }
 
 
@@ -141,4 +154,45 @@ h1{
     justify-content: center; /* Centraliza horizontalmente */
     align-items: flex-end;   /* Alinha ao fundo verticalmente */
 
+}
+
+.carrinho {
+    position: relative;
+    right: 8px;
+}
+
+.home {
+    position: relative;
+    right: 2px;
+}
+.fornecedor {
+    position: relative;
+    right: 10px;
+}
+.feedback {
+    position: relative;
+    right: 10px;
+}
+
+
+@keyframes colorAndGrow {
+    0% {
+        color: #ffffff; /* Começa com a cor branca */
+        transform: scale(1); /* Tamanho inicial */
+    }
+    100% {
+        color: #96c434; /* Termina com a cor final */
+        transform: scale(1.2); /* Aumenta o tamanho em 20% */
+    }
+}
+
+@keyframes Grow {
+    0% {
+        color: #000000; /* Começa com a cor branca */
+        transform: scale(0.8); /* Tamanho inicial */
+    }
+    100% {
+        color: #ffffff; /* Termina com a cor final */
+        transform: scale(1.0); /* Aumenta o tamanho em 20% */
+    }
 }
