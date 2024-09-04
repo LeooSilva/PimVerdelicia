@@ -154,9 +154,24 @@ transition: transform 300ms ease-in-out; /* Transição suave para a transforma�
   h1{
     position: relative;
     top: 150px;
-    left: 55px;
+    left: 85px;
     color: #000000;
+    animation: colorAndGrow 2s ease-in-out forwards; /* Animação de 2 segundos */
   }
+
+  @keyframes colorAndGrow {
+    0% {
+        color: #ffffff; /* Começa com a cor branca */
+        transform: scale(1); /* Tamanho inicial */
+    }
+    100% {
+        color: #000000; /* Termina com a cor final */
+        transform: scale(1.2); /* Aumenta o tamanho em 20% */
+    }
+}
+
+
+
 
   .ctt {
     position: relative;
