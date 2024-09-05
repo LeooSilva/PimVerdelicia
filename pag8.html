@@ -90,7 +90,7 @@
                 </div>
 
                 <div class="container-btn">
-                    <a  href="" class="btn  text">Próximo</a>
+                    <a  href="" class="btn  text" id="proximo-btn">Próximo</a>
                     </div>
 
 
@@ -136,6 +136,36 @@
         
         
             <script>
+
+document.getElementById('proximo-btn').addEventListener('click', function(event) {
+        event.preventDefault();  // Previne o redirecionamento imediato
+
+        const produtos = [];
+
+        // Para cada produto, capture nome, preço e quantidade
+        document.querySelectorAll('.produtos').forEach(function(produtoDiv) {
+            const nomeProduto = produtoDiv.querySelector('p').textContent.trim();
+            const precoProduto = parseFloat(produtoDiv.querySelector('span').textContent.replace('R$', '').trim());
+            const quantidade = parseInt(produtoDiv.querySelector('.quantity').textContent.trim());
+
+            if (quantidade > 0) {
+                // Apenas adicione produtos com quantidade maior que 0
+                produtos.push({
+                    nome: nomeProduto,
+                    preco: precoProduto,
+                    quantidade: quantidade
+                });
+            }
+        });
+
+        // Armazena os produtos no localStorage
+        localStorage.setItem('produtosCarrinho', JSON.stringify(produtos));
+
+        // Redireciona para a página do carrinho
+        window.location.href = 'pag12.html';
+    });
+
+
 
 
 document.querySelectorAll('.product-controls').forEach(function(control) {
