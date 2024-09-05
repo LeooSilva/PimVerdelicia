@@ -23,12 +23,20 @@ body {
     padding: 0;
 background-color: rgba(0, 255, 255, 0);
 display: inline-block;
+transition: transform 300ms ease-in-out;
+
 }
 
 .seta {
     width: 80px;
     height: 80px;
+    transition: transform 300ms ease-in-out;
 }
+
+.img-seta:hover .seta {
+    transform: scale(1.3); /* Aumenta o tamanho da imagem em 10% no hover */
+}
+
 
 p {
     display: flex;
@@ -37,6 +45,7 @@ p {
     position: relative;
     bottom: 100px;
     left: 170px;
+    animation: Grow 2s ease-in-out forwards;
 }
 
 h1 {
@@ -46,13 +55,15 @@ h1 {
     position: relative;
     top: 0px;
     left: 380px;
+    animation: Grow 2s ease-in-out forwards;
 }
 .containercheck {
     display: flex;
     justify-content: center;
     position: relative;
-    top: 395px;
+    top: 385px;
     right:100px;
+    animation: Grow 2s ease-in-out forwards;
 }
 
 .containercheck input[type="checkbox"] {
@@ -60,6 +71,7 @@ h1 {
     height: 16px; /* Ajusta a altura da checkbox */
     position: relative;
     right: 0px;
+    animation: Grow 2s ease-in-out forwards;
 }
 
 .check {
@@ -71,10 +83,20 @@ h1 {
     display: flex;
     justify-content: center;
     position: relative;
-    top: 435px;
+    top: 420px;
     right: 335px;
     height: 50px;
+    animation: Grow 2s ease-in-out forwards;
+    transition: box-shadow 300ms ease-in-out, background-color 300ms ease-in-out;
 }
+
+
+.btn:hover {
+    box-shadow: 0 0 40px 40px rgba(15, 15, 15, 0.7) inset; /* Sombra com tom vermelho */
+    background-color: #5c5c5c; /* Tonalidade um pouco mais clara de preto */
+    transform: scale(1.1); /* Aumenta o tamanho do botão em 5% */
+}
+
 
 .btn {
     background-color: #000000;
@@ -91,5 +113,15 @@ h1 {
     display: flex;
     justify-content: center; /* Centraliza horizontalmente */
     align-items: flex-end;   /* Alinha ao fundo verticalmente */
+    animation: Grow 2s ease-in-out forwards;
+}
 
+@keyframes Grow {
+    0% {
+        transform: scale(0); /* Tamanho inicial */
+    }
+    100% {
+
+        transform: scale(1.0); /* Aumenta o tamanho em 20% */
+    }
 }
