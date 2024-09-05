@@ -37,6 +37,7 @@ body, html {
     margin-bottom: -10px;
     border-radius: 50%;
     overflow: hidden;
+    animation: colorAndGrow 2s ease-in-out forwards;
 }
 
 .profile-pic img {
@@ -63,11 +64,14 @@ body, html {
     cursor: pointer;
 }
 
+
+
 /* Logo */
 .logo {
     text-align: center;
     margin-top: -290px;
     background-color: transparent;
+    animation: colorAndGrow 2s ease-in-out forwards;
 }
 
 /* Container do parágrafo */
@@ -77,6 +81,7 @@ body, html {
     color: #067302;
     text-align: center;
     margin-top: 10px;
+    animation: colorAndGrow 2s ease-in-out forwards;
 }
 
 p {
@@ -91,6 +96,7 @@ p {
     margin-top: 0px;
     margin-right: 20px;
     background-color: transparent;
+    animation: colorAndGrow 2s ease-in-out forwards;
 }
 
 .imgverde {
@@ -107,6 +113,8 @@ p {
     margin-top: 10px;
     background-color: transparent;
     margin-top: -20px;
+    animation: colorAndGrow 2s ease-in-out forwards;
+    transition: box-shadow 300ms ease-in-out, background-color 300ms ease-in-out;
 }
 
 .btn {
@@ -123,6 +131,14 @@ p {
     padding: 0 20px;
     border: 1px solid #98B56D;
 }
+
+.btn:hover {
+    box-shadow: 0 0 40px 40px rgba(15, 15, 15, 0.7) inset; /* Sombra com tom vermelho */
+    background-color: #91da3283; /* Tonalidade um pouco mais clara de preto */
+    transform: scale(1.05); /* Aumenta o tamanho do botão em 5% */
+}
+
+
 
 .seta {
     width: 20px;
@@ -147,6 +163,8 @@ span {
     display: flex;
     justify-content: space-around;
     width: 100%;
+    transition: transform 300ms ease-in-out, box-shadow 300ms ease-in-out;
+
 }
 
 .icon-item {
@@ -162,6 +180,8 @@ span {
     padding-top: 2px;
     position: relative;
     top:  5px;
+    transition: transform 300ms ease-in-out, box-shadow 300ms ease-in-out;
+
 }
 
 .icon + p {
@@ -170,6 +190,7 @@ span {
     text-align: center;
     margin-top: 5px;
 } 
+
 
 /* Remove o sublinhado e a cor azul dos links dentro dos ícones */
 .icon-item a {
@@ -181,6 +202,21 @@ span {
   .icon-item a p {
     color: #ffffff; /* Ou a cor que preferir */
   }
+
+  .icon-item:hover .icon {
+    transform: scale(1.1); /* Aumenta o tamanho do ícone em 10% no hover */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Adiciona uma sombra preta com leve desfoque */
+  }
   
+
+
+  @keyframes colorAndGrow {
+    0% {
+        transform: scale(0); /* Tamanho inicial */
+    }
+    100% {
+        transform: scale(1.0); /* Aumenta o tamanho em 20% */
+    }
+}
 
 
