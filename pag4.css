@@ -27,6 +27,7 @@ h1 {
     position: relative;
     top: 15px;
     left: 130px;
+    animation: Grow 2s ease-in-out forwards; 
 }
 
 
@@ -73,6 +74,8 @@ input {
     justify-content: center;
     position: relative;
     top: 40px;
+    animation: Grow 2s ease-in-out forwards;
+    transition: box-shadow 300ms ease-in-out, background-color 300ms ease-in-out;
 }
 
 .btn {
@@ -90,8 +93,14 @@ input {
     display: flex;
     justify-content: center; /* Centraliza horizontalmente */
     align-items: flex-end;   /* Alinha ao fundo verticalmente */
-
 }
+
+.btn:hover {
+    box-shadow: 0 0 40px 40px rgba(15, 15, 15, 0.7) inset; /* Sombra com tom vermelho */
+    background-color: #5c5c5c; /* Tonalidade um pouco mais clara de preto */
+    transform: scale(1.05); /* Aumenta o tamanho do botão em 5% */
+}
+
 
 .botao-foto {
     font-weight: bold;
@@ -103,7 +112,7 @@ input {
     text-align: center;
     color: rgb(0, 0, 0);
     text-decoration: none;
-    border: 1px solid #ffffff;
+    border: 3px solid #a0a0a02a;
     font-family: Arial, sans-serif; /* Garanta que a fonte seja consistente */
     font-size: 16px; /* Ajuste conforme necessário */
     display: flex;
@@ -112,7 +121,7 @@ input {
 }
 
 .botao-foto:hover {
-    background-color: #A8A8A8; /* Escurece um pouco no hover */
+    background-color: #666464; /* Escurece um pouco no hover */
 }
 
 .container-foto {
@@ -127,9 +136,28 @@ input {
     padding: 0;
 background-color: rgba(0, 255, 255, 0);
 display: inline-block;
+transition: transform 300ms ease-in-out;
 }
 
 .seta {
     width: 80px;
     height: 80px;
+    transition: transform 300ms ease-in-out;
+}
+
+.img-seta:hover .seta {
+    transform: scale(1.3); /* Aumenta o tamanho da imagem em 10% no hover */
+}
+
+
+
+@keyframes Grow {
+    0% {
+        color: #ffffff; /* Começa com a cor branca */
+        transform: scale(0); /* Tamanho inicial */
+    }
+    100% {
+        color: #000000; /* Termina com a cor final */
+        transform: scale(1.0); /* Aumenta o tamanho em 20% */
+    }
 }
