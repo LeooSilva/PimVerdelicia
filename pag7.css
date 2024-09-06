@@ -14,7 +14,7 @@ body, html {
 
 /* Container principal */
 #container {
-    width: 100%;
+    width: 110%;
     height: 100vh;
     margin-top: -165px; 
     background-color: #96c434;
@@ -68,6 +68,7 @@ body, html {
 
 /* Logo */
 .logo {
+    width: 980px;
     text-align: center;
     margin-top: -290px;
     background-color: transparent;
@@ -177,6 +178,7 @@ span {
     width: 25px;
     height: 34px;
     margin-top: px;
+    margin-right: 75px;
     padding-top: 2px;
     position: relative;
     top:  5px;
@@ -208,6 +210,31 @@ span {
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Adiciona uma sombra preta com leve desfoque */
   }
   
+
+  .perfil {
+    position: relative;
+    left: -38px;
+  }
+
+  .carrinho {
+    position: relative;
+    left: -30px;
+  }
+  
+  .home {
+    position: relative;
+    right: 35px;
+  }
+  
+  .for {
+    position: relative;
+    padding-right: 60px;
+  }
+  
+  .feedback{
+    position: relative;
+    right: 30px;
+  }
 
 
   @keyframes colorAndGrow {
