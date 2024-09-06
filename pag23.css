@@ -1,0 +1,253 @@
+ls * {
+    margin: 0;
+    padding: 0;
+    overflow: visible;
+}
+
+body {
+    background-color: rgb(252, 252, 217);
+    overflow: hidden; /* Evita rolagem no contêiner */
+}
+
+#container {
+    width: 101%;
+    height: 100vh;
+    position: fixed;
+    display: flex;
+    justify-content: center; /*centralizou horizontalmente*/
+    background-color: #96c434;
+    border-radius: 0px 0 0 0;
+    overflow: hidden; /* Evita rolagem no contêiner */
+    margin-left: 23px;
+    margin-top: -160px;
+}
+
+.icons1 {
+    display: flex;
+    gap: 10px;
+    position: relative;
+    justify-content: flex-end; /* Alinha todos os itens à direita */
+}
+
+.icon1 {
+    width: 24px;
+    height: 24px;
+    cursor: pointer;
+}
+
+/* Logo */
+.logo {
+    text-align: center;
+    margin-top: -240px;
+    margin-left: -40px;
+    background-color: transparent;
+    animation: Grow 2s ease-in-out forwards;
+}
+
+
+/* Barra inferior */
+.containerbarra {
+    width: 100%;
+    height: 60px;
+    background-color: #007808;
+    position: absolute;
+    top: 91%;
+    right:0px;
+}
+
+.icon-container {
+    display: flex;
+    justify-content: space-around;
+    width: 100%;
+    transition: transform 300ms ease-in-out, box-shadow 300ms ease-in-out;
+}
+
+.icon-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.icon {
+    width: 25px;
+    height: 34px;
+    margin-top: 1px;
+    padding-top: 2px;
+    position: relative;
+    top:  px;
+    left: 1px;
+    transition: transform 300ms ease-in-out, box-shadow 300ms ease-in-out;
+}
+.icon-item:hover .icon {
+  transform: scale(1.1); /* Aumenta o tamanho do ícone em 10% no hover */
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Adiciona uma sombra preta com leve desfoque */
+}
+
+.icon + p {
+    color: white;
+    font-size: 14px;
+    text-align: center;
+    margin-top: -40px;
+    
+}
+
+.pbarra {
+    position: relative;
+    top: 40px;
+}
+
+/* Remove o sublinhado e a cor azul dos links dentro dos ícones */
+.icon-item a {
+    text-decoration: none;
+    color: inherit; /* Mantém a cor do texto igual ao do seu elemento pai */
+  }
+  
+  /* Ajuste a cor do texto, se necessário */
+  .icon-item a p {
+    color: #ffffff; /* Ou a cor que preferir */
+  }
+  
+.carrinho {
+  position: relative;
+  left: -8px;
+}
+
+.home {
+  position: relative;
+  right: 2px;
+}
+
+.forncedor {
+  position: absolute;
+  right: 18px;
+}
+
+.feedback{
+  position: relative;
+  right: 8px;
+}
+
+  
+
+  
+
+
+
+
+  .container-btn {
+    background-color: #06730205;
+    display: flex;
+    justify-content: center;
+    position: relative;
+    margin-top: -20px;
+    top: 385px;
+    right: 300px;
+}
+
+.btn {
+    background-color: #000000;
+    border-radius: 10px;
+    width: 230px;
+    height: 50px;
+    line-height: 50px; /* Centraliza o texto verticalmente */
+    text-align: center;
+    color: white;
+    text-decoration: none;
+    border: 1px solid #000000;
+    font-family: Arial, sans-serif; /* Garanta que a fonte seja consistente */
+    font-size: 16px; /* Ajuste conforme necessário */
+    display: flex;
+    justify-content: center; /* Centraliza horizontalmente */
+    align-items: flex-end;   /* Alinha ao fundo verticalmente */
+    transition: box-shadow 300ms ease-in-out, background-color 300ms ease-in-out;
+}
+
+.btn:hover {
+  box-shadow: 0 0 40px 40px rgba(15, 15, 15, 0.7) inset; /* Sombra com tom vermelho */
+  background-color: #5c5c5c; /* Tonalidade um pouco mais clara de preto */
+  transform: scale(1.05); /* Aumenta o tamanho do botão em 5% */
+}
+
+.feedback-container {
+  width: 200px;
+  height: 130px;
+  border-radius: 10px;
+  border: none;
+  position: relative;
+  background-color: white;
+  left: -80px;
+  top: 180px;
+}
+
+.feedback-header {
+  background-color: black;
+  color: white;
+  text-align: center;
+  padding: 10px;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 15%;
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+}
+
+.feedback-box {
+  padding-top: 30px;
+  color: green;
+  text-align: center;
+  height: 80%;
+  font-size: 18px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+input {
+  width: 200px;
+  height: 91px;
+  border: none;
+  border-radius: 10px;
+
+}
+
+::placeholder {
+  color: #007808;
+  position: relative;
+  left: 60px;
+  font-size: 15px
+}
+
+.paragrafo1 {
+  position: relative;
+  left: 120px;
+  top: 75px;
+}
+
+h1 {
+  color: white;
+  position: relative;
+  left: 300px;
+  font-size: 40px;
+}
+
+.carrinho {
+  position: relative;
+  left: 3px;
+}
+
+.home {
+  position: relative;
+  right: -2px;
+}
+
+.forncedor {
+  position: absolute;
+  right: -0px;
+}
+
+.feedback{
+  position: relative;
+  right: -2px;
+}
