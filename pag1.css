@@ -117,9 +117,7 @@ img {
   @media (min-width: 376px) and (max-width: 430px) {
     /* Estilos para telas entre 376px e 425px */
     
-    body {
-        background-color: blue;
-    }
+   
 
     .bemvindo{
         font-size: 30px;
@@ -190,9 +188,7 @@ img {
 
   @media (min-width: 768px) and (max-width: 1024px) {
     /* Estilos para tablets entre 768px e 1024px */
-    body {
-        background-color: aqua;
-    }
+    
 
     .bemvindo{
         height: 0px;
@@ -250,23 +246,6 @@ img {
         top: 1050px;
         left: 380px;
     }
-
-
-
-
-    
-      
-
-
-
-
-
-
-
-
-
-
-
 
   }
   
