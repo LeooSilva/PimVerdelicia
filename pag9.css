@@ -24,12 +24,21 @@ body {
 background-color: rgba(0, 255, 255, 0);
 display: inline;
 position: relative;
+transition: transform 300ms ease-in-out;
+
 }
 
 .seta {
     width: 80px;
     height: 80px;
+    transition: transform 300ms ease-in-out;
+
 }
+
+.img-seta:hover .seta {
+  transform: scale(1.2); /* Aumenta o tamanho da imagem em 10% no hover */
+}
+
 
 .containerh1 {
     display: flex;
@@ -81,10 +90,10 @@ position: relative;
 /* Barra inferior */
 .containerbarra {
     width: 100%;
-    height: 60px;
+    height: 55px;
     background-color: #007808;
     position: absolute;
-    top: 573px;
+    top: 580px;
     right:0px;
 }
 
@@ -92,6 +101,7 @@ position: relative;
     display: flex;
     justify-content: space-around;
     width: 100%;
+    transition: transform 300ms ease-in-out, box-shadow 300ms ease-in-out;
 }
 
 .icon-item {
@@ -106,16 +116,17 @@ position: relative;
     margin-top: 1px;
     padding-top: 2px;
     position: relative;
-    top:  5px;
+    top:  px;
     left: 1px;
-
+    transition: transform 300ms ease-in-out, box-shadow 300ms ease-in-out;
 }
 
 .icon + p {
     color: white;
     font-size: 14px;
     text-align: center;
-    margin-top: -40px;
+    margin-top: -45px;
+    margin-right: 0px;
 }
 .icon-item a {
     text-decoration: none;
@@ -125,6 +136,11 @@ position: relative;
   /* Ajuste a cor do texto, se necessário */
   .icon-item a p {
     color: #ffffff; /* Ou a cor que preferir */
+  }
+
+  .icon-item:hover .icon {
+    transform: scale(1.1); /* Aumenta o tamanho do ícone em 10% no hover */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Adiciona uma sombra preta com leve desfoque */
   }
   
 
@@ -233,7 +249,7 @@ position: relative;
 
   .pbarra {
     position: relative;
-    left: 0px;
+    left: -10px;
   }
 
   #nomePerfil,
@@ -342,4 +358,19 @@ h4 {
   .switch label:before {
     background-color: white;
   }
-  
+
+  .pbarra {
+    position: relative;
+    top: 45px;
+}
+
+.perfil{
+  position: relative;
+  bottom: 10px;
+  left: 1px;
+}
+
+.home{
+  position:relative;
+  left: -1px;
+}

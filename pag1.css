@@ -13,20 +13,20 @@ body {
     text-align: center;
     position: relative;
     color: #96c434;
-    font-size: 30px;
+    font-size: 40px;
     top: 10px;
     left: 10px;
 }
 
 #titulo1 {
     position: relative;
-    right: 90px;
-    top: 70px;
+    right: 120px;
+    top: 30px;
 }
 
 #titulo2 {
     position: relative;
-    top: 50px;
+    top: 10px;
 }
 
 .paragrafo {
@@ -35,35 +35,37 @@ body {
     text-align: center;
     position: relative;
     right: 15px;
-    top: 55px;
-   
-
+    top: 5px;
+    right:60px;
+    animation: Grow 2s ease-in-out forwards;
 }
 
 span {
     position: relative;
     right: 29px;
+    animation: Grow 2s ease-in-out forwards;
 }
 
 
 .btn {
     background-color: #96c434;
     border-radius: 10px;
-    width: 230px;
+    width: 330px;
     height: 50px;
     line-height: 50px; /* Centraliza o texto verticalmente */
     text-align: center;
     color: white;
     text-decoration: none;
-    border: 1px solid #96c434;
+    border: 3px solid #96c434;
     font-family: Arial, sans-serif; /* Garanta que a fonte seja consistente */
     font-size: 16px; /* Ajuste conforme necessário */
     display: flex;
     justify-content: center; /* Centraliza horizontalmente */
     align-items: flex-end;   /* Alinha ao fundo verticalmente */
     position: relative;
-    top: 150px;
-    
+    top: 100px;
+    transition: box-shadow 300ms ease-in-out, background-color 300ms ease-in-out;
+    animation: Grow 2s ease-in-out forwards;
 }
 
 .container-btn{
@@ -72,24 +74,14 @@ span {
     flex-direction: column-reverse; /* Coloca o botão acima da imagem */
     align-items: center; /* Centraliza ambos horizontalmente */
     position: relative; /* Permite o posicionamento relativo dos itens */
-}
-
-@keyframes animacao-btn {
-    from {
-        width: 230px;
-        height: 50px;
-    }
-    to {
-        width: 235px;
-        height: 55px;
-    }
+    transition: box-shadow 300ms ease-in-out, background-color 300ms ease-in-out;
+    animation: Grow 2s ease-in-out forwards;
 }
 
 .btn:hover {
-    background-color: #7ea325; /* Cor de fundo ao passar o mouse */
-    border-color: #7ea325; /* Cor da borda ao passar o mouse */
-    width: 231px;
-    height: 51px;
+    box-shadow: 0 0 40px 40px rgba(65, 60, 60, 0.7) inset; /* Sombra com tom vermelho */
+    background-color: #78a518; /* Tonalidade um pouco mais clara de preto */
+    transform: scale(1.05); /* Aumenta o tamanho do botão em 5% */
 }
 
 .container-img {
@@ -101,11 +93,180 @@ span {
     height: 30vh;           /* Altura do contêiner (opcional) */
     width: 100%;            /* Largura do contêiner (opcional) */
     position: relative;      /* Garante que a imagem esteja posicionada em relação ao contêiner */
-    top: 300px;
+    top: 270px;
+    animation: Grow 2s ease-in-out forwards;
 }
 
 img {
     height: 350px;
     width: 355px;
-   
+    animation: Grow 2s ease-in-out forwards;
 }
+
+@keyframes Grow {
+    0% {
+        transform: scale(0.3); /* Tamanho inicial */
+    }
+    100% {
+        transform: scale(1.0); /* Aumenta o tamanho em 20% */
+    }
+}
+
+  
+
+  @media (min-width: 376px) and (max-width: 430px) {
+    /* Estilos para telas entre 376px e 425px */
+    
+    body {
+        background-color: blue;
+    }
+
+    .bemvindo{
+        font-size: 30px;
+        height: 0px;
+        width: 80%;
+        top: 10px;
+        left: 10px;
+    }
+    
+    #titulo1 {
+        position: relative;
+        right: 70px;
+        top: 140px;
+    }
+    
+    #titulo2 {
+        position: relative;
+        top: 130px;
+        left: 35px;
+    }
+    .paragrafo {
+        color: black;
+        font-size: 18px;
+        text-align: center;
+        position: relative;
+        left:5px;
+        top: 140px;
+        animation: Grow 2s ease-in-out forwards;
+    }
+    
+    span {
+        position: relative;
+        right: 29px;
+        animation: Grow 2s ease-in-out forwards;
+    }
+    
+    
+    .btn {
+        width: 320px;
+        height: 50px;
+        line-height: 50px; /* Centraliza o texto verticalmente */
+        font-size: 16px; /* Ajuste conforme necessário */
+        position: relative;
+        top: 400px;
+    }
+    
+   
+    
+
+    
+    .container-img {
+        display: inline-block;
+        background-color: rgba(0, 255, 255, 0);
+        display: flex;
+        justify-content: center; /* Centraliza horizontalmente */
+        align-items: flex-end;   /* Alinha ao fundo verticalmente */
+        height: 0vh;           /* Altura do contêiner (opcional) */
+        width: 0%;            /* Largura do contêiner (opcional) */
+        position: relative;      /* Garante que a imagem esteja posicionada em relação ao contêiner */
+        top: 830px;
+        left: 210px;
+        animation: Grow 2s ease-in-out forwards;
+    }
+    
+  }
+  
+
+
+  @media (min-width: 768px) and (max-width: 1024px) {
+    /* Estilos para tablets entre 768px e 1024px */
+    body {
+        background-color: aqua;
+    }
+
+    .bemvindo{
+        height: 0px;
+        width: 80%;
+        top: 10px;
+        left: 10px;
+        font-size: 50px;
+    }
+
+    #titulo1 {
+        position: relative;
+        right: 70px;
+        top: 150px;
+    }
+    
+    #titulo2 {
+        position: relative;
+        top: 130px;
+        left: 75px;
+    }
+    .paragrafo {
+        font-size: 25px;
+        position: relative;
+        left: 3px;
+        top: 130px;
+        animation: Grow 2s ease-in-out forwards;
+    }
+    
+    span {
+        position: relative;
+        right: 35px;
+        animation: Grow 2s ease-in-out forwards;
+    }
+    
+    
+    .btn {
+        width: 320px;
+        height: 50px;
+        line-height: 50px; /* Centraliza o texto verticalmente */
+        font-size: 16px; /* Ajuste conforme necessário */
+        position: relative;
+        top: 550px;
+    }
+    
+    
+    .container-img {
+        display: inline-block;
+        background-color: rgba(0, 255, 255, 0);
+        display: flex;
+        justify-content: center; /* Centraliza horizontalmente */
+        align-items: flex-end;   /* Alinha ao fundo verticalmente */
+        height: 0vh;           /* Altura do contêiner (opcional) */
+        width: 0%;            /* Largura do contêiner (opcional) */
+        position: relative;      /* Garante que a imagem esteja posicionada em relação ao contêiner */
+        top: 1050px;
+        left: 380px;
+    }
+
+
+
+
+    
+      
+
+
+
+
+
+
+
+
+
+
+
+
+  }
+  

@@ -3,37 +3,39 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Termos Finais</title>
-    <link rel="stylesheet" href="pag21.css">
+    <title>Pix</title>
+    <link rel="stylesheet" href="pag24.css">
 </head>
 <body>
-    <div class="img-seta">
-        <a href="pag7.html">
-            <img class="seta" src="img/seta-startup.png" alt="Descrição da Seta">
-        </a>
-    </div>
 
-    <div id="container">
+    
 
-<div class="texto">
-
-   <h1>Termos</h1>
-   <br>
- <p class="pajuda">  NÓS COMO EMPRESA ( NOME ) <br>
-    ASSINAMOS ESSE TERMO,COMO <br>
-    FORNECEDORES PERMITIMOS O <br>
-    CONTROLE DE  ESTOQUE, <br>
-    QUALIDADE DAS NOSSAS <br>
-    HORTALIÇAS. </p>
- <br>
-
- <div class="containercheck">
-    <input type="checkbox" id="lembrar-senha">
-<label class="check" for="lembrar-senha">Confirmo a liberação de dados!</label>
 </div>
 
+<div class="logo">
+    <img src="img/Logo_-_Verdelícia-sem.png" alt="Logo" id="logoImage">
+
+
+    <div class="containerqr">
+        <img  class="Qr" src="img/QRcodepix.jpg" alt="qrcode">
+    </div>
+    
+    <div class="totalpix">
+        <P class="totalidade">Valor Final</P> 
+    </div>
+
+    <div>
+        <p class="pixstartup">PARA: Verdelícia Vegan Food</p>
+    </div>
+
+    <div >
+        <p class="Chave"> CHAVE: unip2k24@estudante.com </p>
+    </div>
+
+
+
 <div class="container-btn">
-    <a  href="pag7.html" class="btn  text">Finalizar</a>
+    <a  href="pag26.html" class="btn  text">Efetuar Pagamento</a>
     </div>
 
 </div>
@@ -77,5 +79,24 @@
 </div>
 
     </div>
+
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const produtosCarrinho = JSON.parse(localStorage.getItem('produtosCarrinho')) || [];
+            let total = 0;  // Variável para armazenar o total dos produtos
+    
+            // Para cada produto armazenado, calcular o preço total (preço * quantidade)
+            produtosCarrinho.forEach(function(produto) {
+                total += produto.preco * produto.quantidade;
+            });
+    
+            // Atualiza o valor total no elemento com a classe 'totalidade'
+            const totalElement = document.querySelector('.totalidade');
+            totalElement.innerHTML = `Valor Final <br> R$ ${total.toFixed(2)}`;
+        });
+    </script>
+    
+        
 </body>
 </html>
