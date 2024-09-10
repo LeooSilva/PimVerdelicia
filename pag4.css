@@ -19,16 +19,6 @@ body {
     border-radius: 130px 0px 0 0;
 }
 
-h1 {
-    display: inline-block;
-    height: 50px;
-    text-align: center;
-    font-size: 50px ;
-    position: relative;
-    top: 15px;
-    left: 130px;
-    animation: Grow 2s ease-in-out forwards; 
-}
 
 
 .containerforms{
@@ -159,5 +149,129 @@ transition: transform 300ms ease-in-out;
     100% {
         color: #000000; /* Termina com a cor final */
         transform: scale(1.0); /* Aumenta o tamanho em 20% */
+    }
+}
+
+
+
+@media (min-width: 376px) and (max-width: 430px) {
+    /* Estilos para telas entre 376px e 425px */
+
+    h1 {
+        display: inline-block;
+        height: 165px;
+        width: 130%;
+        text-align: center;
+        font-size: 30px ;
+        position: relative;
+        top: 15px;
+        left: 130px;
+    }
+    
+    .containerforms{
+        background-color: rgba(0, 0, 0, 0);
+        position: relative;
+        margin: 0px;
+        display: flex; /*ativa o flexbox para alinhar os itens*/
+        flex-direction: column; /* organiza os itens verticalmente, um embaixo do outro */
+        justify-content: center; /*centralizou horizontalmente*/
+        align-items: center; /* centraliza os itens na horizontal */
+        width: 200%;
+        bottom: 80px;
+        right: 80px;
+    }
+
+    label {
+        text-align: left;
+        width: 100%; /* Para garantir que o label ocupe toda a largura do contêiner */
+        font-size: 14px; /* Ajuste o tamanho da fonte conforme necessário */
+        background-color: rgba(0, 0, 255, 0);
+        color: #067302;
+        margin-bottom: 5px; /* Adiciona espaço abaixo do label */
+        font-weight: bold;
+        position: relative;
+        left: 4%;
+        top: 5px;
+        display: block; /* Garante que o label ocupe a largura total */
+        
+        
+    }
+
+    .seta {
+        width: 100px;
+        height: 80px;
+        transition: transform 300ms ease-in-out;
+    }
+}
+
+
+@media (min-width: 768px) and (max-width: 1024px) {
+    /* Estilos para tablets entre 768px e 1024px */
+
+    h1 {
+        display: inline-block;
+        height: 165px;
+        width: 130%;
+        text-align: center;
+        font-size: 55px ;
+        position: relative;
+        top: 55px;
+        left: 270px;
+    }
+    
+    .containerforms{
+        background-color: rgba(0, 0, 0, 0);
+        position: relative;
+        margin: 0px;
+        display: flex; /*ativa o flexbox para alinhar os itens*/
+        flex-direction: column; /* organiza os itens verticalmente, um embaixo do outro */
+        justify-content: center; /*centralizou horizontalmente*/
+        align-items: center; /* centraliza os itens na horizontal */
+        width: 200%;
+        bottom: 80px;
+        right: 140px;
+    }
+    input {
+        background-color: rgba(0, 255, 255, 0);
+        width: 330px;
+        height: 60px;
+        border-radius: 12px;
+        background-color: #CDD1BE;
+        border: 1px solid #CDD1BE ;
+        
+    }
+
+    .seta {
+        width: 150px;
+        height: auto;
+        transition: transform 300ms ease-in-out;
+    }
+    .botao-foto {
+        width: 330px;
+        height: 60px;
+       line-height: 50px; /* Centraliza o texto verticalmente */ 
+        text-align: center;
+        font-size: 20px; /* Ajuste conforme necessário */
+    }
+    .btn {
+        width: 330px;
+        height: 60px;
+        line-height: 60px; /* Centraliza o texto verticalmente */
+        font-size: 20px; /* Ajuste conforme necessário */
+    }
+    label {
+        text-align: left;
+        width: 100%; /* Para garantir que o label ocupe toda a largura do contêiner */
+        font-size: 20px; /* Ajuste o tamanho da fonte conforme necessário */
+        background-color: rgba(0, 0, 255, 0);
+        color: #067302;
+        margin-bottom: 5px; /* Adiciona espaço abaixo do label */
+        font-weight: bold;
+        position: relative;
+        left: 17%;
+        top: 5px;
+        display: block; /* Garante que o label ocupe a largura total */
+        
+        
     }
 }
