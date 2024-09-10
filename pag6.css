@@ -6,6 +6,7 @@
 
 body {
     background-color: #96c434;
+    
 }
 
 
@@ -155,4 +156,92 @@ input {
     100% {
         transform: scale(1.0); /* Aumenta o tamanho em 20% */
     }
+}
+
+
+
+@media (min-width: 376px) and (max-width: 430px) {
+    /* Estilos para telas entre 376px e 425px */
+    .container-voini {
+        margin-top: 30%;
+    }
+    .barravoltar {
+        background-color: #96c434;
+        width: 100%;
+        height: 65px;
+        line-height: 70px; /* Centraliza o texto verticalmente */
+    }
+    .btn {
+        position: relative;
+        top: 0%;
+    }
+    #container {
+        margin-top: 130px;
+    }
+
+    .containerforms{
+        margin-top: 100px;
+    }
+    .container-voini {
+        margin-top: 45px;
+    }
+    
+}
+
+
+@media (min-width: 768px) and (max-width: 1024px) {
+    /* Estilos para tablets entre 768px e 1024px */
+ 
+    .container-voini {
+        margin-top: 0%;
+    }
+    .barravoltar {
+        background-color: #96c434;
+        width: 100%;
+        height: 65px;
+        line-height: 70px; /* Centraliza o texto verticalmente */
+        position: relative;
+
+    }
+    .btn {
+        position: relative;
+        top: 0%;
+        width: 40%;
+        height: 50px;
+    }
+    #container {
+        margin-top: 130px;
+    }
+
+    .containerforms{
+        margin-top: 240px;
+        
+    }
+    .container-voini {
+        margin-top: 125px;
+    }
+    input {
+        width: 40%;
+        height: 50px;
+    }
+    .p2{
+        font-size: 25px;
+        margin-top: 20%;
+        margin-bottom: -23%;
+    }
+    .prbl {
+        font-size: 30px;
+        position: relative;
+        bottom: -130px;
+    }
+    img {
+        position: relative;
+        top: 75px;
+        height: 250px;
+    }
+    .containercadeado {
+        margin-top: -90px;
+        margin-bottom: -5%;
+    }
+
 }
