@@ -45,12 +45,12 @@ transition: transform 300ms ease-in-out;
 
 /* Barra inferior */
 .containerbarra {
-    width: 450%;
+    width: 600%;
     height: 60px;
     background-color: #007808;
     position: absolute;
     top: 88%;
-    right:-430px;
+    right:-565px;
 }
 
 .icon-container {

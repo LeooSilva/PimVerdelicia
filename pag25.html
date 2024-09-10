@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Boleto</title>
+    <link rel="stylesheet" href="pag25.css">
+</head>
+<body>
+
+    
+
+</div>
+
+<div class="logo">
+    <img src="img/Logo_-_Verdelícia-sem.png" alt="Logo" id="logoImage">
+
+
+    <div class="containerbol">
+        <img  class="bol" src="img/codboleto.png" alt="qrcode">
+    </div>
+    
+    <div class="totalpix">
+        <P class="totalidade">Valor Final</P> 
+    </div>
+
+    <div>
+        <p class="pixstartup">PARA: Verdelícia Vegan Food</p>
+    </div>
+
+    <div >
+        <p class="Chave boleto-code" id="boletoCode"> <strong>CÓDIGO DO BOLETO:</strong> 00000.00000 00000.000000 00000.000000 0 00000000000000</p>
+    </div>
+
+
+
+<div class="container-btn">
+    <a  href="pag26.html" class="btn  text">Efetuar Pagamento</a>
+    </div>
+
+</div>
+
+
+
+
+<div class="containerbarra">
+    <div class="icon-container">
+        <div class="icon-item">
+            <a href="pag9.html">
+                <img class="icon" src="img/forma-do-usuario.png" alt="usuário">
+                <p class="pbarra" >Perfil</p>
+            </a>
+        </div>
+        <div class="icon-item">
+            <a href="pag12.html">
+                <img class="icon" src="img/carrinho-de-compras.png" alt="carrinho de compras">
+                <p class="pbarra carrinho">Carrinho</p>
+            </a>
+        </div>
+        <div class="icon-item">
+            <a href="pag7.html">
+                <img class="icon" src="img/casa.png" alt="home">
+                <p class="pbarra home" >Home</p>
+            </a>
+        </div>
+        <div class="icon-item">
+            <a href="pag19.html">
+                <img class="icon" src="img/silhueta-de-caminhao-de-entrega.png" alt="caminhão">
+                <p class="pbarra fornecedor" >Fornecedor</p>
+            </a>
+        </div>
+        <div class="icon-item">
+            <a href="pag23.html">
+                <img class="icon" src="img/silhueta-em-forma-de-coracao.png" alt="feedback">
+                <p class="pbarra feedback" >Feedback</p>
+            </a>
+        </div>
+    </div>
+</div>
+
+    </div>
+
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const produtosCarrinho = JSON.parse(localStorage.getItem('produtosCarrinho')) || [];
+            let total = 0;  // Variável para armazenar o total dos produtos
+    
+            // Para cada produto armazenado, calcular o preço total (preço * quantidade)
+            produtosCarrinho.forEach(function(produto) {
+                total += produto.preco * produto.quantidade;
+            });
+    
+            // Atualiza o valor total no elemento com a classe 'totalidade'
+            const totalElement = document.querySelector('.totalidade');
+            totalElement.innerHTML = `Valor Final <br> R$ ${total.toFixed(2)}`;
+        });
+
+
+
+
+
+
+        // Função para gerar o código do boleto
+    function generateBoleto() {
+        // Função para gerar uma parte aleatória de X dígitos
+        function generatePart(length) {
+            let part = '';
+            for (let i = 0; i < length; i++) {
+                part += Math.floor(Math.random() * 10);
+            }
+            return part;
+        }
+
+        // Gerar os campos do código do boleto
+        const part1 = generatePart(5);
+        const part2 = generatePart(5);
+        const part3 = generatePart(5);
+        const part4 = generatePart(6);
+        const part5 = generatePart(5);
+        const verificador = Math.floor(Math.random() * 9); // Gerar o dígito verificador
+        const valor = generatePart(14); // Gerar valor aleatório para o boleto
+
+        // Concatenar as partes do boleto
+        const boletoCode = `${part1}.${part2} ${part3}.${part4} ${part5}.000000 ${verificador} ${valor}`;
+        
+        // Exibir o código gerado dentro da tag <p>
+        document.getElementById('boletoCode').textContent = boletoCode;
+    }
+
+    // Gerar o código do boleto automaticamente quando a página carrega
+    window.onload = generateBoleto;
+    </script>
+    
+        
+</body>
+</html>

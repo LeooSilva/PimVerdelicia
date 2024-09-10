@@ -1,30 +1,40 @@
-ls * {
+/* Evite overflow no layout */
+* {
     margin: 0;
     padding: 0;
-    overflow: visible;
+    box-sizing: border-box;
 }
 
 body {
     background-color: rgb(252, 252, 217);
-    overflow: hidden; /* Evita rolagem no contêiner */
+    overflow-x: hidden; /* Impede a rolagem horizontal */
 }
 
-
+/* Ajuste no contêiner principal para alinhar os produtos */
+.container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    min-height: 100vh; /* Garante que o conteúdo ocupe pelo menos a altura da janela */
+    padding-bottom: 100px; /* Espaço para a barra inferior */
+}
 
 /* Barra inferior */
 .containerbarra {
     width: 100%;
-    height: 60px;
+    height: 50px;
     background-color: #007808;
-    position: absolute;
-    top: 91%;
-    right:0px;
+    position: fixed; /* Fixar a barra no final da página */
+    bottom: 0;
+    left: 0;
 }
 
 .icon-container {
     display: flex;
     justify-content: space-around;
     width: 100%;
+    height: 100%;
     transition: transform 300ms ease-in-out, box-shadow 300ms ease-in-out;
 }
 
@@ -37,11 +47,6 @@ body {
 .icon {
     width: 25px;
     height: 34px;
-    margin-top: 1px;
-    padding-top: 2px;
-    position: relative;
-    top:  px;
-    left: 1px;
     transition: transform 300ms ease-in-out, box-shadow 300ms ease-in-out;
 }
 
@@ -49,114 +54,21 @@ body {
     color: white;
     font-size: 14px;
     text-align: center;
-    margin-top: -40px;
+    position: relative;
+    top: -2px;
 }
 
 .pbarra {
     position: relative;
-    top: 40px;
+    top: 5px;
 }
 
-/* Remove o sublinhado e a cor azul dos links dentro dos ícones */
 .icon-item a {
     text-decoration: none;
     color: inherit; /* Mantém a cor do texto igual ao do seu elemento pai */
   }
-  
-  /* Ajuste a cor do texto, se necessário */
-  .icon-item a p {
-    color: #ffffff; /* Ou a cor que preferir */
-  }
-.container{ 
-    display: flex;
-    align-items: center;
-    justify-content: center;/
-}
-.icon-item:hover .icon {
-    transform: scale(1.1); /* Aumenta o tamanho do ícone em 10% no hover */
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Adiciona uma sombra preta com leve desfoque */
-  }
-  
 
-
-h1{
-    position: relative;
-    top: 50px;
-    left: 200px;
-    color: #96c434;
-    font-size: 60px;
-    animation: colorAndGrow 2s ease-in-out forwards; /* Animação de 2 segundos */
-}
-
-.container-btn {
-    background-color: #06730200;
-    display: flex;
-    justify-content: center;
-    height: 50px;
-    position: relative;
-    top: 440px;
-    left: -240px;
-
-}
-
-.btn {
-    background-color: #000000;
-    border-radius: 15px;
-    width: 250px;
-    height: 50px;
-    line-height: 50px; /* Centraliza o texto verticalmente */
-    text-align: center;
-    color: white;
-    text-decoration: none;
-    border: 1px solid #000000;
-    font-family: Arial, sans-serif; /* Garanta que a fonte seja consistente */
-    font-size: 16px; /* Ajuste conforme necessário */
-    display: flex;
-    justify-content: center; /* Centraliza horizontalmente */
-    align-items: flex-end;   /* Alinha ao fundo verticalmente */
-    transition: box-shadow 300ms ease-in-out, background-color 300ms ease-in-out;
-    animation: Grow 2s ease-in-out forwards; /* Animação de 2 segundos */
-}
-.btn:hover {
-    box-shadow: 0 0 40px 40px rgba(15, 15, 15, 0.7) inset; /* Sombra com tom vermelho */
-    background-color: #5c5c5c; /* Tonalidade um pouco mais clara de preto */
-    transform: scale(1.05); /* Aumenta o tamanho do botão em 5% */
-}
-
-
-
-.container-btntot {
-    background-color:#00780800;
-    display: flex;
-    justify-content: center;
-    height: 50px;
-    position: relative;
-    top: 380px;
-    left: -15px;
-
-
-}
-
-.btntotal {
-    background-color: #007808;
-    border-radius: 15px;
-    width: 200px;
-    height: 40px;
-    line-height: 40px; /* Centraliza o texto verticalmente */
-    text-align: center;
-    color: white;
-    text-decoration: none;
-    border: 1px solid #007808;
-    border-radius: 10px;
-    font-family: Arial, sans-serif; /* Garanta que a fonte seja consistente */
-    font-size: 16px; /* Ajuste conforme necessário */
-    display: flex;
-    justify-content: center; /* Centraliza horizontalmente */
-    align-items: flex-end;   /* Alinha ao fundo verticalmente */
-
-}
-
-.carrinho {
+  .carrinho {
     position: relative;
     right: 8px;
 }
@@ -174,25 +86,136 @@ h1{
     right: 10px;
 }
 
+.icon-item:hover .icon {
+    transform: scale(1.1); /* Aumenta o tamanho do ícone em 10% no hover */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Adiciona uma sombra preta com leve desfoque */
+  }
+  
 
+/* Centralizar título sem usar position absoluta */
+h1 {
+    color: #96c434;
+    font-size: 60px;
+    margin-bottom: 20px; /* Espaço entre o título e os produtos */
+    animation: colorAndGrow 2s ease-in-out forwards;
+    position: relative;
+    bottom: -60px;
+}
+
+/* Ajustes nos botões */
+ .container-btntot {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 0px;
+    margin-top: 20px;
+}
+
+.container-btn{
+    display: flex;
+    justify-content: center;
+    margin-top: 10px;
+}
+
+
+.btn{
+    background-color: #000000;
+    border-radius: 15px;
+    width: 250px;
+    height: 50px;
+    line-height: 50px;
+    text-align: center;
+    color: white;
+    text-decoration: none;
+    font-family: Arial, sans-serif;
+    font-size: 16px;
+    transition: box-shadow 300ms ease-in-out, background-color 300ms ease-in-out;
+    animation: Grow 2s ease-in-out forwards; /* Animação de 2 segundos */
+}
+.btn:hover {
+    box-shadow: 0 0 40px 40px rgba(15, 15, 15, 0.7) inset; /* Sombra com tom vermelho */
+    background-color: #5c5c5c; /* Tonalidade um pouco mais clara de preto */
+    transform: scale(1.05); /* Aumenta o tamanho do botão em 5% */
+}
+
+.btntotal {
+    background-color: #007808;
+    border-radius: 15px;
+    width: 200px;
+    height: 40px;
+    line-height: 40px;
+    text-align: center;
+    color: white;
+    text-decoration: none;
+    font-family: Arial, sans-serif;
+    font-size: 16px;
+}
+
+/* Centralizar e organizar os produtos */
+.container-produtos-carrinho {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px; /* Espaçamento entre os produtos */
+    width: 100%;
+    margin-top: 80px;
+}
+
+.produto-carrinho {
+    background-color: #CDD1BE;
+    border: 2px solid #CDD1BE;
+    border-radius: 18px;
+    width: 250px;
+    height: 60px;
+    padding: 10px; /* Adicionar padding para aumentar a altura de forma natural */
+    display: flex;
+    gap: 15px;
+    align-items: center;
+    
+}
+
+.produto-imagem {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: white;
+    padding: 10px;
+    border-radius: 20px;
+    box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.1);
+    margin-left: -12px;
+}
+
+.produto-imagem img {
+    border-radius: 10px;
+    height: 45px;
+    width: 45px;
+}
+
+.produto-detalhes {
+    color: #007808;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+/* Animações */
 @keyframes colorAndGrow {
     0% {
-        color: #ffffff; /* Começa com a cor branca */
-        transform: scale(1); /* Tamanho inicial */
+        color: #ffffff;
+        transform: scale(1);
     }
     100% {
-        color: #96c434; /* Termina com a cor final */
-        transform: scale(1.2); /* Aumenta o tamanho em 20% */
+        color: #96c434;
+        transform: scale(1.2);
     }
 }
 
 @keyframes Grow {
     0% {
-        color: #000000; /* Começa com a cor branca */
-        transform: scale(0.8); /* Tamanho inicial */
+        color: #000000;
+        transform: scale(0.8);
     }
     100% {
-        color: #ffffff; /* Termina com a cor final */
-        transform: scale(1.0); /* Aumenta o tamanho em 20% */
+        color: #ffffff;
+        transform: scale(1);
     }
 }

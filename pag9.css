@@ -90,10 +90,10 @@ transition: transform 300ms ease-in-out;
 /* Barra inferior */
 .containerbarra {
     width: 100%;
-    height: 60px;
+    height: 55px;
     background-color: #007808;
     position: absolute;
-    top: 573px;
+    top: 580px;
     right:0px;
 }
 
@@ -125,8 +125,8 @@ transition: transform 300ms ease-in-out;
     color: white;
     font-size: 14px;
     text-align: center;
-    margin-top: -40px;
-    margin-right: 10px;
+    margin-top: -45px;
+    margin-right: 0px;
 }
 .icon-item a {
     text-decoration: none;
@@ -359,28 +359,18 @@ h4 {
     background-color: white;
   }
 
-  .carrinho {
+  .pbarra {
     position: relative;
-    right: 8px;
-  }
-  
+    top: 45px;
+}
 
-  .home {
-    position: relative;
-    right: 8px;
-  }
+.perfil{
+  position: relative;
+  bottom: 10px;
+  left: 1px;
+}
 
-  .fornecedor {
-    position: relative;
-    right: 8px;
-  }
-
-  .feedback {
-    position: relative;
-    right: 8px;
-  }
-
-  .perfil {
-    position:relative;
-    right: 8px;
-  }
+.home{
+  position:relative;
+  left: -1px;
+}
