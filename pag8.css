@@ -14,9 +14,9 @@ body, html {
 
 /* Container principal */
 #container {
-    width: 115%;
+    width: 145%;
     height: 100vh;
-    margin-left: -60px;
+    margin-left: -0px;
     margin-top: -165px; 
     background-color: #96c434;
     display: flex;
@@ -67,11 +67,13 @@ body, html {
 /* Logo */
 .logo {
     width: 980px;
-    
     text-align: center;
     margin-top: -290px;
     background-color: transparent;
     animation: Grow 2s ease-in-out forwards;
+}
+.logo1{
+margin-right: -40%;
 }
 
 
@@ -168,7 +170,7 @@ span {
 .btn {
     background-color: #000000;
     border-radius: 15px;
-    width: 250px;
+    width: 270px;
     height: 50px;
     line-height: 50px; /* Centraliza o texto verticalmente */
     text-align: center;
@@ -180,7 +182,7 @@ span {
     display: flex;
     justify-content: center; /* Centraliza horizontalmente */
     align-items: flex-end;   /* Alinha ao fundo verticalmente */
-    margin-right: 30px;
+    margin-right: 20px;
 }
 
 .imgalface {
@@ -425,3 +427,300 @@ bottom: 0px;
         transform: scale(1.0); /* Aumenta o tamanho em 20% */
     }
 }
+
+
+@media (min-width: 376px) and (max-width: 430px) {
+    /* Estilos para telas entre 376px e 425px */
+
+
+    
+    .containerprodutos {
+        margin-right: 59%;
+        position: relative;
+        top: 5%;
+    }
+    .logo1{
+        position: relative;
+        margin-left: -98%;
+        margin-top: 10%;
+        width: 30%;
+     }
+    
+     #container {
+        width: 110%;
+        height: 100vh;
+        margin-top: -40px;
+        background-color: #96c434;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+    }
+    /* Botão */
+.container-btn {
+    margin-top: -150px;
+    margin-left: -58%;
+}
+
+.btn {
+    width: 280px;
+    height: 50px;
+}
+
+/* Barra inferior */
+.containerbarra {
+    width: 39%;
+    height: 60px;
+    background-color: #007808;
+    position: relative;
+    top: -23%;
+    left: -0%;
+}
+
+.icon-container {
+    display: flex;
+    justify-content: space-evenly;
+    width: 20%;
+
+}
+
+.icon-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.icon {
+    width: 25px;
+    height: 34px;
+    margin-right: 45px;
+    position: relative;
+    top:  5px;
+    transition: transform 300ms ease-in-out, box-shadow 300ms ease-in-out;
+
+}
+
+.icon + p {
+    color: white;
+    font-size: 14px;
+    text-align: center;
+    margin-top: 5px;
+} 
+
+.iconperfil {
+    position: relative;
+    left: 15px;
+    margin-left: 10px;
+}
+
+.iconcarrinho{
+    position: relative;
+    left: 30px;
+}
+
+
+.iconhome {
+    position: relative;
+    left: 50px;
+}
+
+.iconfornecedor {
+    position: relative;
+    left: 65px;
+}
+
+.iconfeedback {
+    position: relative;
+    left: 73px;
+}
+.perfil {
+    position: relative;
+    left: 0px;
+  }
+
+  .carrinho {
+    position: relative;
+    left:10px;
+  }
+  
+  .home {
+    position: relative;
+    right: -28px;
+  }
+  
+  .fornecedor {
+    position: relative;
+    right: -50px;
+  }
+  
+  .feedback{
+    position: relative;
+    right: -50px;
+  }
+
+  .icon + p {
+    font-size: 12px;
+}
+
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+@media (min-width: 768px) and (max-width: 1024px) {
+    /* Estilos para tablets entre 768px e 1024px */
+    .containerprodutos {
+        margin-right: 20%;
+        position: relative;
+        top: 5%;
+    }
+    .produtos {
+        width: 300px;
+        height: 70px;
+    }
+
+    .imgalface {
+        height: 50px;
+        width: 50px;
+    }
+    
+    .containeralface {
+        position: relative;
+        right: 90px;
+        bottom: 20px;
+    }
+    .containerlim{
+        position: relative;
+        right: 90px;
+        bottom: 20px;
+    }
+    .imglim{
+        height: 50px;
+        width: 50px;
+    } 
+    .containerpep{
+        position: relative;
+        right: 90px;
+        bottom: 20px;
+    }
+    .imgpep{
+        height: 50px;
+        width: 50px;
+    }
+    .containerkiw{
+        position: relative;
+        right: 90px;
+        bottom: 20px;
+    }
+    .imgkiw{
+        height: 50px;
+        width: 50px;
+    }
+
+
+    .logo1{
+        position: relative;
+        margin-left: -55%;
+        margin-top: 2%;
+        width: 50%;
+     }
+    
+     #container {
+        width: 110%;
+        height: 100vh;
+        margin-top: -155px;
+        background-color: #96c434;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+    }
+    /* Botão */
+.container-btn {
+    margin-top: -170px;
+    margin-left: -20%;
+}
+
+.btn {
+    width: 300px;
+    height: 60px;
+    line-height: 60px; /* Centraliza o texto verticalmente */
+}
+
+/* Barra inferior */
+.containerbarra {
+    width: 72%;
+    height: 65px;
+    background-color: #007808;
+    position: relative;
+    top: -15%;
+    margin-left: -0%;
+}
+
+.iconperfil {
+    position: relative;
+    left: 15px;
+    margin-left: 10px;
+}
+
+.iconcarrinho{
+    position: relative;
+    left: 30px;
+}
+
+
+.iconhome {
+    position: relative;
+    left: 50px;
+}
+
+.iconfornecedor {
+    position: relative;
+    left: 40px;
+}
+
+.iconfeedback {
+    position: relative;
+    left: 23px;
+}
+.perfil {
+    position: relative;
+    left: 19px;
+  }
+
+  .carrinho {
+    position: relative;
+    left: 29px;
+  }
+  
+  .home {
+    position: relative;
+    right: -50px;
+  }
+  
+  .fornecedor {
+    position: relative;
+    margin-left: 50%;
+  }
+  
+  .feedback{
+    position: relative;
+    right: -20px;
+  }
+
+  .icon + p {
+    font-size: 15px;
+
+}}
