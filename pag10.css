@@ -138,6 +138,7 @@ ul li {
 }
 
 h1{
+  font-size: 30px;
   position: relative;
   top: 80px;
   color: #96c434;
@@ -392,7 +393,7 @@ ul li {
     position: relative;
     top: 90px;
     left: -50px;
-    margin-bottom: -2%;
+    margin-bottom: -0%;
   }
 
 }
