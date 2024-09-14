@@ -124,7 +124,12 @@ input {
     display: flex;
     justify-content: center; /* Centraliza horizontalmente */
     align-items: flex-end;   /* Alinha ao fundo verticalmente */
-
+    transition: box-shadow 300ms ease-in-out, background-color 300ms ease-in-out;
+}
+.btn:hover {
+    box-shadow: 0 0 40px 40px rgba(15, 15, 15, 0.7) inset; /* Sombra com tom vermelho */
+    background-color: #5c5c5c; /* Tonalidade um pouco mais clara de preto */
+    transform: scale(1.05); /* Aumenta o tamanho do botão em 5% */
 }
 
 .lkk {
