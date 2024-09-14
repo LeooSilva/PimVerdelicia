@@ -86,7 +86,7 @@ transition: transform 300ms ease-in-out;
 
 .pbarra {
     position: relative;
-    top: 40px;
+    top: 35px;
 }
 .icon-item:hover .icon {
     transform: scale(1.1); /* Aumenta o tamanho do ícone em 10% no hover */
@@ -128,7 +128,7 @@ transition: transform 300ms ease-in-out;
 
 
   h1{
-    font-size: 40px;
+    font-size: 50px;
     color: #96c434;
     position: relative;
     left: 140px;
@@ -154,7 +154,7 @@ transition: transform 300ms ease-in-out;
     height: 50px;
     position: relative;
     top: 180px;
-    left: -80px;
+    left: -100px;
     transition: box-shadow 300ms ease-in-out, background-color 300ms ease-in-out;
     animation: Grow 2s ease-in-out forwards; /* Animação de 2 segundos */
 }
@@ -230,3 +230,181 @@ transition: transform 300ms ease-in-out;
 }
 
 
+
+@media (min-width: 376px) and (max-width: 430px) {
+    /* Estilos para telas entre 376px e 425px */
+
+    .pbarra {
+        position: relative;
+        top: 38px;
+    }
+    #container {
+        width: 103%;
+    }
+    .icon + p {
+        font-size: 12px;
+        
+    }
+    .containerbarra {
+        top: 93%;
+    }
+    .iconfeedback{
+        position: relative;
+        left: 25px;
+    }
+    .feedback{
+        position: relative;
+        left: 13px;
+    }
+    .iconfornecedor{
+        position: relative;
+        left: 40px;
+    }
+    .fornecedor{
+        position: relative;
+        left: 23px;
+    }
+    .iconhome{
+        position: relative;
+        left: 20px;
+    }
+    .home{
+        left: 17px;
+    }
+    .iconcarrinho{
+        position: relative;
+        left: 20px;
+    }
+    .carrinho{
+        position: relative;
+        left: 10px;
+    }
+    .iconperfil{
+        position: relative;
+        left: 3px;
+    }
+
+    .container-btn1 {
+        position: relative;
+        top: 230px;
+        left: -123px;
+    }
+    
+    .container-btn2 {
+        position: relative;
+        top: 280px;
+        left: 10px;
+    }
+    
+    
+    
+    .container-btn3 {
+        position: relative;
+        top: 300px;
+        left: 10px;
+    }
+    h1{
+        position: relative;
+        top: 150px;
+    }
+}
+
+
+@media (min-width: 768px) and (max-width: 1024px) {
+    /* Estilos para tablets entre 768px e 1024px */
+    
+    #container {
+        width: 102%;
+    }
+    .icon + p {
+        font-size: 18px;
+        
+    }
+    .containerbarra {
+        top: 94%;
+    }
+    .perfil{
+        position: relative;
+        left: -5px;
+    }
+    .iconfeedback{
+        position: relative;
+        left: 29px;
+    }
+    .feedback{
+        position: relative;
+        left: 13px;
+    }
+    .iconfornecedor{
+        position: relative;
+        left: 40px;
+    }
+    .fornecedor{
+        position: relative;
+        left: 18px;
+    }
+    .iconhome{
+        position: relative;
+        left: 20px;
+    }
+    .home{
+        left: 14px;
+    }
+    .iconcarrinho{
+        position: relative;
+        left: 20px;
+    }
+    .carrinho{
+        position: relative;
+        left: 4px;
+    }
+    .iconperfil{
+        position: relative;
+        left: 3px;
+    }
+
+    .container-btn1 {
+        position: relative;
+        top: 270px;
+        left: -180px;
+    }
+    
+    .container-btn2 {
+        position: relative;
+        top: 350px;
+        left: -20px;
+    }
+    
+    
+    
+    .container-btn3 {
+        position: relative;
+        top: 400px;
+        left: -20px;
+    }
+
+    .btn1 {
+        width: 300px;
+        height: 65px;
+        line-height: 70px; /* Centraliza o texto verticalmente */
+    }
+    h1{
+        position: relative;
+        top: 150px;
+        font-size: 70px;
+    }
+    .text{
+        position: relative;
+        left: 20px;
+    }
+
+    .pag{
+        position: relative;
+        left: -200px;
+        height: 40px;
+        top: 10px;
+    }
+
+   
+
+}
