@@ -1,0 +1,143 @@
+ls * {
+    margin: 0;
+    padding: 0;
+    overflow: visible;
+}
+
+body {
+    background-color: rgb(252, 252, 217);
+    overflow: hidden; /* Evita rolagem no contêiner */
+
+}
+
+
+/* Logo */
+.logo {
+    text-align: center;
+    margin-top: -380px;
+    background-color: transparent;
+    animation: Grow 2s ease-in-out forwards;
+}
+
+
+/* Barra inferior */
+.containerbarra {
+    width: 100%;
+    height: 60px;
+    background-color: #007808;
+    position: absolute;
+    top: 91%;
+    right:0px;
+}
+
+.icon-container {
+    display: flex;
+    justify-content: space-around;
+    width: 100%;
+    transition: transform 300ms ease-in-out, box-shadow 300ms ease-in-out;
+}
+
+.icon-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.icon {
+    width: 25px;
+    height: 34px;
+    margin-top: 1px;
+    padding-top: 2px;
+    position: relative;
+    top:  px;
+    left: 1px;
+    transition: transform 300ms ease-in-out, box-shadow 300ms ease-in-out;
+}
+.icon-item:hover .icon {
+  transform: scale(1.1); /* Aumenta o tamanho do ícone em 10% no hover */
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Adiciona uma sombra preta com leve desfoque */
+}
+
+.icon + p {
+    color: white;
+    font-size: 14px;
+    text-align: center;
+    margin-top: -40px;
+    
+}
+
+.pbarra {
+    position: relative;
+    top: 40px;
+}
+
+/* Remove o sublinhado e a cor azul dos links dentro dos ícones */
+.icon-item a {
+    text-decoration: none;
+    color: inherit; /* Mantém a cor do texto igual ao do seu elemento pai */
+  }
+  
+  /* Ajuste a cor do texto, se necessário */
+  .icon-item a p {
+    color: #ffffff; /* Ou a cor que preferir */
+  }
+  
+.carrinho {
+  position: relative;
+  left: 4px;
+}
+
+.home {
+  position: relative;
+  right: -3px;
+}
+
+.forncedor {
+  position: absolute;
+  right: 10px;
+}
+
+.feedback{
+  position: relative;
+  right: -7px;
+}
+
+.check {
+    height: 100px;
+    position: relative;
+    left: 600px;
+    top: 230px;
+}
+
+h2 {
+    position: relative;
+    left: 425px;
+    top: 230px;
+  }
+
+  .tit { 
+    font-family: Arial, sans-serif;
+    font-size: 24px;
+    color: #96c434;
+    width: 0; /* Inicialmente o texto não aparece */
+    white-space: nowrap;
+    overflow: hidden;
+    border-right: .15em solid #037e32; /* Simula o cursor */
+    box-shadow: none;
+    animation: caret .5s step-end infinite alternate, type 5s steps(23, end) 1 normal forwards;
+  }
+
+  @keyframes type {
+    0% {
+      width: 0ch;
+    }
+    100% {
+      width: 37ch; /* O texto será "digitado" até 23 caracteres */
+    }
+  }
+
+  @keyframes caret { 
+    50% { 
+      border-color: transparent; /* Faz o "cursor" piscar */
+    }
+  }

@@ -28,7 +28,7 @@
         </div>
 
         <div class="logo">
-            <img src="img/Logo_-_Verdelícia-sem.png" alt="Logo" id="logoImage">
+            <img class="logo1" src="img/Logo_-_Verdelícia-sem.png" alt="Logo" id="logoImage">
 
 
 
@@ -43,7 +43,7 @@
 
                         <p class="pp">Alface <br> <span>R$ 4,00</span></p>
                         <div class="containeralface">
-                        <img class="imgalface" src="img/alface (1).png" alt="">
+                        <img class="imgalface" src="img/alface128.png" alt="">
                         </div>
                         <div class="product-controls">
                             <button class="minus">-</button>
@@ -90,7 +90,7 @@
                 </div>
 
                 <div class="container-btn">
-                    <a  href="" class="btn  text">Próximo</a>
+                    <a  href="" class="btn  text" id="proximo-btn">Próximo</a>
                     </div>
 
 
@@ -98,32 +98,32 @@
                         <div class="icon-container">
                             <div class="icon-item">
                                 <a href="pag9.html">
-                                    <img class="icon" src="img/forma-do-usuario.png" alt="usuário">
-                                    <p>Perfil</p>
+                                    <img class="icon iconperfil" src="img/forma-do-usuario.png" alt="usuário">
+                                    <p class="perfil">Perfil</p>
                                 </a>
                             </div>
                             <div class="icon-item">
                                 <a href="pag12.html">
-                                    <img class="icon" src="img/carrinho-de-compras.png" alt="carrinho de compras">
-                                    <p>Carrinho</p>
+                                    <img class="icon iconcarrinho" src="img/carrinho-de-compras.png" alt="carrinho de compras">
+                                    <p class="carrinho">Carrinho</p>
                                 </a>
                             </div>
                             <div class="icon-item">
                                 <a href="pag7.html">
-                                    <img class="icon" src="img/casa.png" alt="home">
-                                    <p>Home</p>
+                                    <img class="icon iconhome" src="img/casa.png" alt="home">
+                                    <p class="home">Home</p>
                                 </a>
                             </div>
                             <div class="icon-item">
                                 <a href="pag19.html">
-                                    <img class="icon" src="img/silhueta-de-caminhao-de-entrega.png" alt="caminhão">
-                                    <p>Fornecedor</p>
+                                    <img class="icon iconfornecedor" src="img/silhueta-de-caminhao-de-entrega.png" alt="caminhão">
+                                    <p class="fornecedor">Fornecedor</p>
                                 </a>
                             </div>
                             <div class="icon-item">
                                 <a href="pag23.html">
-                                    <img class="icon" src="img/silhueta-em-forma-de-coracao.png" alt="feedback">
-                                    <p>Feedback</p>
+                                    <img class="icon iconfeedback" src="img/silhueta-em-forma-de-coracao.png" alt="feedback">
+                                    <p class="feedback">Feedback</p>
                                 </a>
                             </div>
                         </div>
@@ -136,6 +136,38 @@
         
         
             <script>
+
+document.getElementById('proximo-btn').addEventListener('click', function(event) {
+        event.preventDefault();  // Previne o redirecionamento imediato
+
+        const produtos = [];
+
+        // Para cada produto, capture nome, preço, quantidade e imagem
+        document.querySelectorAll('.produtos').forEach(function(produtoDiv) {
+            const nomeProduto = produtoDiv.querySelector('p').textContent.trim();
+            const precoProduto = parseFloat(produtoDiv.querySelector('span').textContent.replace('R$', '').trim());
+            const quantidade = parseInt(produtoDiv.querySelector('.quantity').textContent.trim());
+            const imgProduto = produtoDiv.querySelector('img').src; // Captura o src da imagem
+
+            if (quantidade > 0) {
+                // Apenas adicione produtos com quantidade maior que 0
+                produtos.push({
+                    nome: nomeProduto,
+                    preco: precoProduto,
+                    quantidade: quantidade,
+                    imagem: imgProduto // Armazena o src da imagem
+                });
+            }
+        });
+
+        // Armazena os produtos no localStorage
+        localStorage.setItem('produtosCarrinho', JSON.stringify(produtos));
+
+        // Redireciona para a página do carrinho
+        window.location.href = 'pag12.html';
+    });
+
+
 
 
 document.querySelectorAll('.product-controls').forEach(function(control) {
