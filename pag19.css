@@ -18,7 +18,7 @@ body {
     background-color: rgb(252, 252, 217);
     border-radius: 130px 0 0 0;
     overflow: hidden; /* Evita rolagem no contêiner */
-    margin-top: -20px;
+    margin-top: -30px;
     margin-left: -20px;
 }
 .img-seta {
@@ -45,12 +45,12 @@ transition: transform 300ms ease-in-out;
 
 /* Barra inferior */
 .containerbarra {
-    width: 450%;
+    width: 550%;
     height: 60px;
     background-color: #007808;
     position: absolute;
     top: 88%;
-    right:-430px;
+    right:-530px;
 }
 
 .icon-container {
@@ -126,7 +126,7 @@ transition: transform 300ms ease-in-out;
 
 
   h1{
-    font-size: 50px;
+    font-size: 45px;
     color: #000000;
     position: relative;
     left: 150px;
@@ -224,3 +224,113 @@ input {
     top: 60px;
     left:35px ;
 }
+
+
+
+@media (min-width: 376px) and (max-width: 430px) {
+    /* Estilos para telas entre 376px e 425px */
+    #container {
+        width: 103%;
+        height: 100vh;
+        margin-top: -0px;
+    }
+    h1{
+        font-size: 30px;
+        bottom: -100px;
+        left: 130px;
+      }
+      .containerforms{
+        bottom: 50px;
+        right: 85px;
+      }
+        .containerbarra {
+            width: 180%;
+            top: 82%;
+            right:-90px;
+        }
+
+        .icon + p {
+            font-size: 12px;
+        }
+        .iconcarrinho{
+            left: 35%;
+        }
+        .carrinho {
+            position: relative;
+            right: -9px;
+          }
+
+          .iconhome{
+            left: 35%;
+          }
+          .home {
+            position: relative;
+            right: -9px;
+          }
+          .iconfornecedor{
+            left: 35%;
+          }
+          .fornecedor {
+            position: relative;
+            right: -4px;
+          }
+          .feedback {
+            position: relative;
+            right: 9px;
+          }
+            
+}
+
+
+@media (min-width: 768px) and (max-width: 1024px) {
+    /* Estilos para tablets entre 768px e 1024px */
+    #container {
+        width: 103%;
+        height: 100vh;
+        margin-top: -0px;
+    }
+    h1{
+        font-size: 50px;
+        bottom: -100px;
+        left: 130px;
+      }
+      .containerforms{
+        bottom: 50px;
+        right: 265px;
+      }
+        .containerbarra {
+            width: 330%;
+            top: 89%;
+            right:-280px;
+        }
+
+        .icon + p {
+            font-size: 18px;
+        }
+        .iconcarrinho{
+            left: 35%;
+        }
+        .carrinho {
+            position: relative;
+            right: -9px;
+          }
+
+          .iconhome{
+            left: 35%;
+          }
+          .home {
+            position: relative;
+            right: -9px;
+          }
+          .iconfornecedor{
+            left: 35%;
+          }
+          .fornecedor {
+            position: relative;
+            right: -4px;
+          }
+          .feedback {
+            position: relative;
+            right: 9px;
+          }
+        }
