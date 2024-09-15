@@ -10,7 +10,7 @@ body {
 }
 
 #container {
-    width: 101%;
+    width: 102%;
     height: 100vh;
     position: fixed;
     display: flex;
@@ -18,7 +18,6 @@ body {
     background-color: rgb(252, 252, 217);
     border-radius: 130px 0 0 0;
     overflow: hidden; /* Evita rolagem no contêiner */
-    margin-top: 13px;
     margin-left: -20px;
 }
 .img-seta {
@@ -48,7 +47,7 @@ transition: transform 300ms ease-in-out; /* Transição suave para a transforma�
     height: 60px;
     background-color: #007808;
     position: absolute;
-    top: 74%;
+    top: 70%;
     right:0px;
 }
 
@@ -116,7 +115,7 @@ transition: transform 300ms ease-in-out; /* Transição suave para a transforma�
 
 .forncedor {
   position: absolute;
-  right: 15px;
+  left: -25px;
 }
 
 .feedback{
@@ -146,14 +145,15 @@ transition: transform 300ms ease-in-out; /* Transição suave para a transforma�
     margin-top: 65px;
     color: #000000;
     position: relative;
-    top: 70px;
-    left: 10px;
-
+    left: 40px;
+    top: 30px;
+    font-size: 12px;
   }
 
   h1{
     position: relative;
-    top: 150px;
+    font-size: 30px;
+    top: 100px;
     left: 85px;
     color: #000000;
     animation: colorAndGrow 2s ease-in-out forwards; /* Animação de 2 segundos */
@@ -188,15 +188,16 @@ transition: transform 300ms ease-in-out; /* Transição suave para a transforma�
     justify-content: center;
     position: relative;
     margin-top: -20px;
-    top: 135px;
+    top: 70px;
+    left: 20px;
 }
 
 .btn {
     background-color: #000000;
     border-radius: 10px;
-    width: 230px;
-    height: 50px;
-    line-height: 50px; /* Centraliza o texto verticalmente */
+    width: 180px;
+    height: 40px;
+    line-height: 40px; /* Centraliza o texto verticalmente */
     text-align: center;
     color: white;
     text-decoration: none;
@@ -220,16 +221,142 @@ transition: transform 300ms ease-in-out; /* Transição suave para a transforma�
   display: flex;
   justify-content: center;
   position: relative;
-  top:70px ;
+  top:30px ;
+  left: 20px;
+  font-size: 15px;
 }
 
 .containercheck input[type="checkbox"] {
-  width: 20px; /* Ajusta a largura da checkbox */
+  width: 13px; /* Ajusta a largura da checkbox */
   height: 16px; /* Ajusta a altura da checkbox */
   position: relative;
   right: 0px;
+  top: -2px;
 }
 
 .check {
   color: black;
+}
+
+
+@media (min-width: 376px) and (max-width: 430px) {
+  /* Estilos para telas entre 376px e 425px */
+  #container {
+    width: 103%;
+    height: 101vh;
+}
+.containerbarra {
+  top: 76%;
+}
+
+.iconfeedback{
+  position: relative;
+  left: 20px;
+}
+.feedback{
+  left: 10px;
+}
+.iconfornecedor{
+  left: 50%;
+}
+.fornecedor{
+  left: 30%;
+}
+.iconhome{
+left: 40%;
+}
+.home{
+  left: 30%;
+}
+.iconcarrinho{
+  left: 30%;
+}
+.carrinho{
+  left: 10%;
+}
+.icon + p {
+  font-size: 12px;
+}
+.container-btn {
+  top: 235px;
+}
+
+.containercheck {
+  top:170px ;
+}
+.pajuda {
+  top: 170px;
+}
+h1{
+  top: 200px;
+}
+}
+
+
+
+@media (min-width: 768px) and (max-width: 1024px) {
+  /* Estilos para tablets entre 768px e 1024px */
+  
+  .containerbarra {
+    top: 83%;
+  }
+
+  #container {
+    width: 103%;
+    height: 101vh;
+}
+.iconfeedback{
+  position: relative;
+  left: 27px;
+}
+.feedback{
+  left: 10px;
+}
+.iconfornecedor{
+  left: 50%;
+}
+.fornecedor{
+  left: 30%;
+}
+.iconhome{
+left: 40%;
+}
+.home{
+  left: 30%;
+}
+.iconcarrinho{
+  left: 30%;
+}
+.carrinho{
+  left: 10%;
+}
+.icon + p {
+  font-size: 18px;
+}
+
+.container-btn {
+  top: 255px;
+  left: -10px;
+}
+.btn{
+  width: 280px;
+  height: 60px;
+  line-height: 60px;
+  font-size: 20px;
+}
+.containercheck {
+  top:200px ;
+  left: -20px;
+  font-size: 20px;
+}
+.pajuda {
+  top: 200px;
+  font-size: 20px;
+  left: 10px;
+}
+h1{
+  top: 250px;
+  right: 40px;
+  font-size: 50px;
+}
 }
