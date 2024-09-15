@@ -14,8 +14,9 @@ body, html {
 
 /* Container principal */
 #container {
-    width: 100%;
+    width: 145%;
     height: 100vh;
+    margin-left: -0px;
     margin-top: -165px; 
     background-color: #96c434;
     display: flex;
@@ -65,9 +66,14 @@ body, html {
 
 /* Logo */
 .logo {
+    width: 980px;
     text-align: center;
     margin-top: -290px;
     background-color: transparent;
+    animation: Grow 2s ease-in-out forwards;
+}
+.logo1{
+margin-right: -40%;
 }
 
 
@@ -95,6 +101,7 @@ span {
     display: flex;
     justify-content: space-around;
     width: 100%;
+    transition: transform 300ms ease-in-out, box-shadow 300ms ease-in-out;
 }
 
 .icon-item {
@@ -110,6 +117,7 @@ span {
     padding-top: 2px;
     position: relative;
     top:  5px;
+    transition: transform 300ms ease-in-out, box-shadow 300ms ease-in-out;
 }
 
 .icon + p {
@@ -118,6 +126,12 @@ span {
     text-align: center;
     margin-top: 3px;
 } 
+
+.icon-item:hover .icon {
+    transform: scale(1.1); /* Aumenta o tamanho do ícone em 10% no hover */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Adiciona uma sombra preta com leve desfoque */
+  }
+  
 
 .containerprodutos {
     display: flex;
@@ -144,13 +158,19 @@ span {
     display: flex;
     justify-content: center;
     height: 50px;
+    transition: box-shadow 300ms ease-in-out, background-color 300ms ease-in-out;
 
+}
+.btn:hover {
+    box-shadow: 0 0 40px 40px rgba(15, 15, 15, 0.7) inset; /* Sombra com tom vermelho */
+    background-color: #5c5c5c; /* Tonalidade um pouco mais clara de preto */
+    transform: scale(1.05); /* Aumenta o tamanho do botão em 5% */
 }
 
 .btn {
     background-color: #000000;
     border-radius: 15px;
-    width: 250px;
+    width: 270px;
     height: 50px;
     line-height: 50px; /* Centraliza o texto verticalmente */
     text-align: center;
@@ -162,7 +182,7 @@ span {
     display: flex;
     justify-content: center; /* Centraliza horizontalmente */
     align-items: flex-end;   /* Alinha ao fundo verticalmente */
-
+    margin-right: 20px;
 }
 
 .imgalface {
@@ -379,8 +399,11 @@ bottom: 0px;
     display: flex;
     align-items: center; /* Centraliza verticalmente */
     justify-content: center; /* Centraliza horizontalmente */
+    transition: transform 0.2s ease; /* Adiciona uma transição suave */
 }
-
+.minus:hover, .plus:hover {
+    transform: scale(1.2); /* Aumenta o botão em 20% */
+}
 .quantity {
     position: relative;
     left: 22px; /* Manter o deslocamento original */
@@ -394,3 +417,310 @@ bottom: 0px;
     position: relative;
     left: 30px;
 }
+
+
+@keyframes Grow {
+    0% {
+        transform: scale(0); /* Tamanho inicial */
+    }
+    100% {
+        transform: scale(1.0); /* Aumenta o tamanho em 20% */
+    }
+}
+
+
+@media (min-width: 376px) and (max-width: 430px) {
+    /* Estilos para telas entre 376px e 425px */
+
+
+    
+    .containerprodutos {
+        margin-right: 59%;
+        position: relative;
+        top: 5%;
+    }
+    .logo1{
+        position: relative;
+        margin-left: -98%;
+        margin-top: 10%;
+        width: 30%;
+     }
+    
+     #container {
+        width: 110%;
+        height: 100vh;
+        margin-top: -40px;
+        background-color: #96c434;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+    }
+    /* Botão */
+.container-btn {
+    margin-top: -150px;
+    margin-left: -58%;
+}
+
+.btn {
+    width: 280px;
+    height: 50px;
+}
+
+/* Barra inferior */
+.containerbarra {
+    width: 39%;
+    height: 60px;
+    background-color: #007808;
+    position: relative;
+    top: -23%;
+    left: -0%;
+}
+
+.icon-container {
+    display: flex;
+    justify-content: space-evenly;
+    width: 20%;
+
+}
+
+.icon-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.icon {
+    width: 25px;
+    height: 34px;
+    margin-right: 45px;
+    position: relative;
+    top:  5px;
+    transition: transform 300ms ease-in-out, box-shadow 300ms ease-in-out;
+
+}
+
+.icon + p {
+    color: white;
+    font-size: 14px;
+    text-align: center;
+    margin-top: 5px;
+} 
+
+.iconperfil {
+    position: relative;
+    left: 15px;
+    margin-left: 10px;
+}
+
+.iconcarrinho{
+    position: relative;
+    left: 30px;
+}
+
+
+.iconhome {
+    position: relative;
+    left: 50px;
+}
+
+.iconfornecedor {
+    position: relative;
+    left: 65px;
+}
+
+.iconfeedback {
+    position: relative;
+    left: 73px;
+}
+.perfil {
+    position: relative;
+    left: 0px;
+  }
+
+  .carrinho {
+    position: relative;
+    left:10px;
+  }
+  
+  .home {
+    position: relative;
+    right: -28px;
+  }
+  
+  .fornecedor {
+    position: relative;
+    right: -50px;
+  }
+  
+  .feedback{
+    position: relative;
+    right: -50px;
+  }
+
+  .icon + p {
+    font-size: 12px;
+}
+
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+@media (min-width: 768px) and (max-width: 1024px) {
+    /* Estilos para tablets entre 768px e 1024px */
+    .containerprodutos {
+        margin-right: 20%;
+        position: relative;
+        top: 5%;
+    }
+    .produtos {
+        width: 300px;
+        height: 70px;
+    }
+
+    .imgalface {
+        height: 50px;
+        width: 50px;
+    }
+    
+    .containeralface {
+        position: relative;
+        right: 90px;
+        bottom: 20px;
+    }
+    .containerlim{
+        position: relative;
+        right: 90px;
+        bottom: 20px;
+    }
+    .imglim{
+        height: 50px;
+        width: 50px;
+    } 
+    .containerpep{
+        position: relative;
+        right: 90px;
+        bottom: 20px;
+    }
+    .imgpep{
+        height: 50px;
+        width: 50px;
+    }
+    .containerkiw{
+        position: relative;
+        right: 90px;
+        bottom: 20px;
+    }
+    .imgkiw{
+        height: 50px;
+        width: 50px;
+    }
+
+
+    .logo1{
+        position: relative;
+        margin-left: -55%;
+        margin-top: 2%;
+        width: 50%;
+     }
+    
+     #container {
+        width: 110%;
+        height: 100vh;
+        margin-top: -155px;
+        background-color: #96c434;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+    }
+    /* Botão */
+.container-btn {
+    margin-top: -170px;
+    margin-left: -20%;
+}
+
+.btn {
+    width: 300px;
+    height: 60px;
+    line-height: 60px; /* Centraliza o texto verticalmente */
+}
+
+/* Barra inferior */
+.containerbarra {
+    width: 72%;
+    height: 65px;
+    background-color: #007808;
+    position: relative;
+    top: -15%;
+    margin-left: -0%;
+}
+
+.iconperfil {
+    position: relative;
+    left: 15px;
+    margin-left: 10px;
+}
+
+.iconcarrinho{
+    position: relative;
+    left: 30px;
+}
+
+
+.iconhome {
+    position: relative;
+    left: 50px;
+}
+
+.iconfornecedor {
+    position: relative;
+    left: 40px;
+}
+
+.iconfeedback {
+    position: relative;
+    left: 23px;
+}
+.perfil {
+    position: relative;
+    left: 19px;
+  }
+
+  .carrinho {
+    position: relative;
+    left: 29px;
+  }
+  
+  .home {
+    position: relative;
+    right: -50px;
+  }
+  
+  .fornecedor {
+    position: relative;
+    margin-left: 50%;
+  }
+  
+  .feedback{
+    position: relative;
+    right: -20px;
+  }
+
+  .icon + p {
+    font-size: 15px;
+
+}}

@@ -24,12 +24,21 @@ body {
 background-color: rgba(0, 255, 255, 0);
 display: inline;
 position: relative;
+transition: transform 300ms ease-in-out;
+
 }
 
 .seta {
     width: 80px;
     height: 80px;
+    transition: transform 300ms ease-in-out;
+
 }
+
+.img-seta:hover .seta {
+  transform: scale(1.2); /* Aumenta o tamanho da imagem em 10% no hover */
+}
+
 
 .containerh1 {
     display: flex;
@@ -81,10 +90,10 @@ position: relative;
 /* Barra inferior */
 .containerbarra {
     width: 100%;
-    height: 60px;
+    height: 55px;
     background-color: #007808;
     position: absolute;
-    top: 573px;
+    top: 580px;
     right:0px;
 }
 
@@ -92,6 +101,7 @@ position: relative;
     display: flex;
     justify-content: space-around;
     width: 100%;
+    transition: transform 300ms ease-in-out, box-shadow 300ms ease-in-out;
 }
 
 .icon-item {
@@ -106,16 +116,17 @@ position: relative;
     margin-top: 1px;
     padding-top: 2px;
     position: relative;
-    top:  5px;
+    top:  px;
     left: 1px;
-
+    transition: transform 300ms ease-in-out, box-shadow 300ms ease-in-out;
 }
 
 .icon + p {
     color: white;
     font-size: 14px;
     text-align: center;
-    margin-top: -40px;
+    margin-top: -45px;
+    margin-right: 0px;
 }
 .icon-item a {
     text-decoration: none;
@@ -125,6 +136,11 @@ position: relative;
   /* Ajuste a cor do texto, se necessário */
   .icon-item a p {
     color: #ffffff; /* Ou a cor que preferir */
+  }
+
+  .icon-item:hover .icon {
+    transform: scale(1.1); /* Aumenta o tamanho do ícone em 10% no hover */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Adiciona uma sombra preta com leve desfoque */
   }
   
 
@@ -207,16 +223,16 @@ position: relative;
     top: 35px;
   }
 
-  .ape4 {
-    position: relative;
-    left: 225px;
-    top: 50px;
-    color: #96c434;
-  }
+  
   .ape5 {
     position: relative;
     left: 205px;
     top: -100px;
+  }
+  .ape4{
+    left: 225px;
+    top: 50px;
+    color: #96c434;
   }
 
   .noti {
@@ -233,7 +249,7 @@ position: relative;
 
   .pbarra {
     position: relative;
-    left: 0px;
+    left: -10px;
   }
 
   #nomePerfil,
@@ -249,20 +265,24 @@ position: relative;
 
 #nomePerfil {
     position: relative;
-    left: 92px;
+    left: 40px;
     top: 35px;
 }
 
 #telefonePerfil {
     position: relative;
-    left: 65px;
+    left: 82px;
     top: 35px;
 }
 
 #enderecoPerfil {
     position: relative;
-    left: 103px;
+    left:50px;
     top: 35px;
+}
+#emailPerfil{
+  position: relative;
+  left: 79px;
 }
 
 h4 {
@@ -270,6 +290,7 @@ h4 {
     position: relative;
     top: 20px;
     left: 25px;
+    font-size:18px;
 }
 .linhahor {
     border: none;
@@ -342,4 +363,297 @@ h4 {
   .switch label:before {
     background-color: white;
   }
+
+  .pbarra {
+    position: relative;
+    top: 45px;
+}
+
+.perfil{
+  position: relative;
+  bottom: 10px;
+  left: 1px;
+}
+
+.home{
+  position:relative;
+  left: -1px;
+}
+
+
+
+
+
+@media (min-width: 376px) and (max-width: 430px) {
+  /* Estilos para telas entre 376px e 425px */
+
+  #container {
+    width: 100%;
+    height: 80vh;
+}
+
+
+  .containerbarra {
+    width: 100%;
+    height: 55px;
+    position: absolute ;
+    margin-top: 41%;
+  }
+    .sobre {
+      margin-right: 350px;
+      margin-top: 10%;
+    }
+    .iconsobre1 {
+      width: 35px;
+      height: auto;
+      position: relative;
+      left: 140px;
+      top: -135px;
+    }
+    .ape {
+      position: relative;
+      left: 45px;
+      top: 35px;
+    }
+    #nomePerfil {
+      position: relative;
+      left: 45px;
+      top: 35px;
+  }
   
+  #telefonePerfil {
+      position: relative;
+      left: 95px;
+      top: 35px;
+  }
+  
+  #enderecoPerfil {
+      position: relative;
+      left: 55px;
+      top: 35px;
+  }
+  #emailPerfil{
+    position: relative;
+    left: 89px;
+    top: 35px;
+  }
+  .ape1 {
+    position: relative;
+    left:88px;
+    top: 35px;
+  }
+  .ape2 {
+    position: relative;
+    left: 94px;
+    top: 35px;
+  }
+  .ape3 {
+    position: relative;
+    left: 54px;
+    top: 35px;
+  }
+
+  h4 {
+    font-size: 15px;
+}
+
+.ape4 {
+  position: relative;
+  left: 55%;
+  top: 50;
+  color: #96c434;
+}
+
+.autorizações {
+  position: relative;
+  left: 70%;
+}
+
+
+.iconperfil{
+  position: relative;
+  left: 32%;
+}
+  .iconcarrinho{
+  position: relative;
+  left: 42%;
+}
+.iconhome{
+  position: relative;
+  left: 62%;
+}
+.iconfornecedor{
+  position: relative;
+  left: 62%;
+}
+.iconfeedback{
+  position: relative;
+  left: 42%;
+}
+.perfil{
+  position: relative;
+  bottom: 10px;
+  left: 8px;
+}
+
+.home{
+  position:relative;
+  left: 20px;
+}
+.carrinho{
+  position:relative;
+  left:13px;
+}  
+.fornecedor{
+  position:relative;
+  left:24px;
+}
+.feedback{
+  position:relative;
+  left:8px;
+}
+.icon + p {
+  font-size: 12px;
+}
+}
+
+
+
+@media (min-width: 768px) and (max-width: 1024px) {
+  /* Estilos para tablets entre 768px e 1024px */
+  #container {
+    width: 100%;
+    height: 90vh;
+}
+
+
+  .containerbarra {
+    width: 100%;
+    height: 58px;
+    position: absolute ;
+    margin-top: 40%;
+  }
+    .sobre {
+      margin-right: 350px;
+      margin-top: 15%;
+    }
+    .iconsobre1 {
+      width: 35px;
+      height: auto;
+      position: relative;
+      left: 140px;
+      top: -135px;
+    }
+    .ape {
+      position: relative;
+      left: 45px;
+      top: 35px;
+    }
+    #nomePerfil {
+      position: relative;
+      left: 45px;
+      top: 35px;
+  }
+  
+  #telefonePerfil {
+      position: relative;
+      left: 85px;
+      top: 35px;
+  }
+  
+  #enderecoPerfil {
+      position: relative;
+      left: 53px;
+      top: 35px;
+  }
+  #emailPerfil{
+    position: relative;
+    left: 79px;
+    top: 35px;
+  }
+  .ape1 {
+    position: relative;
+    left:78px;
+    top: 35px;
+  }
+  .ape2 {
+    position: relative;
+    left: 84px;
+    top: 35px;
+  }
+  .ape3 {
+    position: relative;
+    left: 54px;
+    top: 35px;
+  }
+
+  h4 {
+    font-size: 20px;
+}
+
+.ape4 {
+  position: relative;
+  left: 54%;
+  top: 50;
+  color: #96c434;
+}
+.ape5 {
+  position: relative;
+  left: 50%;
+}
+
+.autorizações {
+  position: relative;
+  left: 66%;
+}
+.noti{
+  position: relative;
+  left: 60%;
+}
+
+.iconperfil{
+  position: relative;
+  left: 32%;
+}
+  .iconcarrinho{
+  position: relative;
+  left: 42%;
+}
+.iconhome{
+  position: relative;
+  left: 62%;
+}
+.iconfornecedor{
+  position: relative;
+  left: 62%;
+}
+.iconfeedback{
+  position: relative;
+  left: 42%;
+}
+.perfil{
+  position: relative;
+  bottom: 10px;
+  left: 8px;
+}
+
+.home{
+  position:relative;
+  left: 20px;
+}
+.carrinho{
+  position:relative;
+  left:13px;
+}  
+.fornecedor{
+  position:relative;
+  left:24px;
+}
+.feedback{
+  position:relative;
+  left:8px;
+}
+.icon + p {
+  font-size: 13px;
+} 
+}

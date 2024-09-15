@@ -28,12 +28,19 @@ background-color: rgba(0, 255, 255, 0);
 display: inline;
 position: relative;
 top: -5px;
+transition: transform 300ms ease-in-out;
 }
 
 .seta {
     width: 80px;
     height: 80px;
+    transition: transform 300ms ease-in-out;
 }
+
+.img-seta:hover .seta {
+    transform: scale(1.1); /* Aumenta o tamanho da imagem em 10% no hover */
+}
+
 
 
 /* Barra inferior */
@@ -50,6 +57,7 @@ top: -5px;
     display: flex;
     justify-content: space-around;
     width: 100%;
+    transition: transform 300ms ease-in-out, box-shadow 300ms ease-in-out;
 }
 
 .icon-item {
@@ -66,7 +74,7 @@ top: -5px;
     position: relative;
     top:  px;
     left: 1px;
-
+    transition: transform 300ms ease-in-out, box-shadow 300ms ease-in-out;
 }
 
 .icon + p {
@@ -78,8 +86,13 @@ top: -5px;
 
 .pbarra {
     position: relative;
-    top: 40px;
+    top: 35px;
 }
+.icon-item:hover .icon {
+    transform: scale(1.1); /* Aumenta o tamanho do ícone em 10% no hover */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Adiciona uma sombra preta com leve desfoque */
+  }
+  
 
 /* Remove o sublinhado e a cor azul dos links dentro dos ícones */
 .icon-item a {
@@ -92,13 +105,47 @@ top: -5px;
     color: #ffffff; /* Ou a cor que preferir */
   }
 
+
+  .carrinho{
+    position: relative;
+    right: 8px;
+  }
+
+  .home{
+    position: relative;
+    right: 0px;
+  }
+
+  .fornecedor{
+    position: relative;
+    right: 12px;
+  }
+
+  .feedback{
+    position: relative;
+    right: 10px;
+  }
+
+
   h1{
-    font-size: 40px;
+    font-size: 50px;
     color: #96c434;
     position: relative;
-    left: 100px;
-    bottom: -60px;
+    left: 140px;
+    bottom: -110px;
+    animation: colorAndGrow 2s ease-in-out forwards; /* Animação de 2 segundos */
   }
+
+  @keyframes colorAndGrow {
+    0% {
+        color: #ffffff; /* Começa com a cor branca */
+        transform: scale(1); /* Tamanho inicial */
+    }
+    100% {
+        color: #96c434; /* Termina com a cor final */
+        transform: scale(1.2); /* Aumenta o tamanho em 20% */
+    }
+}
 
   .container-btn1 {
     background-color: #06730200;
@@ -107,8 +154,9 @@ top: -5px;
     height: 50px;
     position: relative;
     top: 180px;
-    left: -120px;
-
+    left: -100px;
+    transition: box-shadow 300ms ease-in-out, background-color 300ms ease-in-out;
+    animation: Grow 2s ease-in-out forwards; /* Animação de 2 segundos */
 }
 
 .container-btn2 {
@@ -118,9 +166,11 @@ top: -5px;
     height: 50px;
     position: relative;
     top: 220px;
-    left: -30px;
-
+    left: 10px;
+    transition: box-shadow 300ms ease-in-out, background-color 300ms ease-in-out;
+    animation: Grow 2s ease-in-out forwards; /* Animação de 2 segundos */
 }
+
 
 
 .container-btn3 {
@@ -130,7 +180,9 @@ top: -5px;
     height: 50px;
     position: relative;
     top: 230px;
-    left: -30px;
+    left: 10px;
+    transition: box-shadow 300ms ease-in-out, background-color 300ms ease-in-out;
+    animation: Grow 2s ease-in-out forwards; /* Animação de 2 segundos */
 
 }
 
@@ -149,7 +201,25 @@ top: -5px;
     display: flex;
     justify-content: center; /* Centraliza horizontalmente */
     align-items: flex-end;   /* Alinha ao fundo verticalmente */
+    transition: box-shadow 300ms ease-in-out, background-color 300ms ease-in-out;
+    animation: Grow 2s ease-in-out forwards; /* Animação de 2 segundos */
+}
 
+.btn1:hover {
+    box-shadow: 0 0 40px 40px rgba(15, 15, 15, 0.7) inset; /* Sombra com tom vermelho */
+    background-color: #5c5c5c; /* Tonalidade um pouco mais clara de preto */
+    transform: scale(1.05); /* Aumenta o tamanho do botão em 5% */
+}
+
+@keyframes Grow {
+    0% {
+        color: #ffffff; /* Começa com a cor branca */
+        transform: scale(0.8); /* Tamanho inicial */
+    }
+    100% {
+        color: #96c434; /* Termina com a cor final */
+        transform: scale(1.0); /* Aumenta o tamanho em 20% */
+    }
 }
 
 .pag{
@@ -160,3 +230,181 @@ top: -5px;
 }
 
 
+
+@media (min-width: 376px) and (max-width: 430px) {
+    /* Estilos para telas entre 376px e 425px */
+
+    .pbarra {
+        position: relative;
+        top: 38px;
+    }
+    #container {
+        width: 103%;
+    }
+    .icon + p {
+        font-size: 12px;
+        
+    }
+    .containerbarra {
+        top: 93%;
+    }
+    .iconfeedback{
+        position: relative;
+        left: 25px;
+    }
+    .feedback{
+        position: relative;
+        left: 13px;
+    }
+    .iconfornecedor{
+        position: relative;
+        left: 40px;
+    }
+    .fornecedor{
+        position: relative;
+        left: 23px;
+    }
+    .iconhome{
+        position: relative;
+        left: 20px;
+    }
+    .home{
+        left: 17px;
+    }
+    .iconcarrinho{
+        position: relative;
+        left: 20px;
+    }
+    .carrinho{
+        position: relative;
+        left: 10px;
+    }
+    .iconperfil{
+        position: relative;
+        left: 3px;
+    }
+
+    .container-btn1 {
+        position: relative;
+        top: 230px;
+        left: -123px;
+    }
+    
+    .container-btn2 {
+        position: relative;
+        top: 280px;
+        left: 10px;
+    }
+    
+    
+    
+    .container-btn3 {
+        position: relative;
+        top: 300px;
+        left: 10px;
+    }
+    h1{
+        position: relative;
+        top: 150px;
+    }
+}
+
+
+@media (min-width: 768px) and (max-width: 1024px) {
+    /* Estilos para tablets entre 768px e 1024px */
+    
+    #container {
+        width: 102%;
+    }
+    .icon + p {
+        font-size: 18px;
+        
+    }
+    .containerbarra {
+        top: 94%;
+    }
+    .perfil{
+        position: relative;
+        left: -5px;
+    }
+    .iconfeedback{
+        position: relative;
+        left: 29px;
+    }
+    .feedback{
+        position: relative;
+        left: 13px;
+    }
+    .iconfornecedor{
+        position: relative;
+        left: 40px;
+    }
+    .fornecedor{
+        position: relative;
+        left: 18px;
+    }
+    .iconhome{
+        position: relative;
+        left: 20px;
+    }
+    .home{
+        left: 14px;
+    }
+    .iconcarrinho{
+        position: relative;
+        left: 20px;
+    }
+    .carrinho{
+        position: relative;
+        left: 4px;
+    }
+    .iconperfil{
+        position: relative;
+        left: 3px;
+    }
+
+    .container-btn1 {
+        position: relative;
+        top: 270px;
+        left: -180px;
+    }
+    
+    .container-btn2 {
+        position: relative;
+        top: 350px;
+        left: -20px;
+    }
+    
+    
+    
+    .container-btn3 {
+        position: relative;
+        top: 400px;
+        left: -20px;
+    }
+
+    .btn1 {
+        width: 300px;
+        height: 65px;
+        line-height: 70px; /* Centraliza o texto verticalmente */
+    }
+    h1{
+        position: relative;
+        top: 150px;
+        font-size: 70px;
+    }
+    .text{
+        position: relative;
+        left: 20px;
+    }
+
+    .pag{
+        position: relative;
+        left: -200px;
+        height: 40px;
+        top: 10px;
+    }
+
+   
+
+}
