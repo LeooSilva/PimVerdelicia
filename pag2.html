@@ -13,40 +13,67 @@
     </div> 
 
     <div id="container">
-        <h1>
-            Login
-        </h1>
+        <h1>Login</h1>
 
         <div class="facalog">
-            <a  class="link"  href="">Faça login para continuar</a>
+            <a class="link" href="#">Faça login para continuar</a>
         </div>
 
         <div class="containerforms">
-            <label for=" nome">  Nome:</label> 
-        <input type="text" name="nome" id="nome">
-<br>
-        <label for="senha"> Senha:</label> 
-        <input type="password" name="senha" id="senha">
+            <label for="nome">Nome:</label> 
+            <input type="text" name="nome" id="nome" required>
+            <br>
+            <label for="senha">Senha:</label> 
+            <input type="password" name="senha" id="senha" required>
         </div>
 
         <div class="containercheck">
             <input type="checkbox" id="lembrar-senha">
-    <label class="check" for="lembrar-senha">Lembrar senha</label>
+            <label class="check" for="lembrar-senha">Lembrar senha</label>
         </div>
 
         <div class="container-btn">
-            <a  href="pag7.html" class="btn  text">Entrar</a>
-            </div>
+            <button type="button" class="btn text">Entrar</button>
+        </div>
 
-            <div class="lkk">
-                <a  class="link"  href="pag6.html">Esqueceu a senha?</a>
-            </div>
+        <div class="lkk">
+            <a class="link" href="pag6.html">Esqueceu a senha?</a>
+        </div>
 
-            <div class="lkk">
-                <a   style="margin-top:6px ;" class="link"  href="pag3.html">Cadastre-se!</a>
-            </div>
-
+        <div class="lkk">
+            <a style="margin-top:6px;" class="link" href="pag3.html">Cadastre-se!</a>
+        </div>
     </div>
-
+    <script>
+        document.querySelector('.btn').addEventListener('click', async (event) => {
+            event.preventDefault(); // Impede o comportamento padrão de redirecionamento
+    
+            const nome = document.getElementById('nome').value;
+            const senha = document.getElementById('senha').value;
+    
+            try {
+                const response = await fetch('http://localhost:3000/login', {
+                    method: 'POST',
+                    headers: {
+                        'Content-Type': 'application/json'
+                    },
+                    body: JSON.stringify({ nome, senha })
+                });
+    
+                const result = await response.json();
+    
+                if (response.ok) {
+                    alert('Login realizado com sucesso!');
+                    window.location.href = 'pag7.html';
+                } else {
+                    alert(result.error || 'Erro no login. Verifique suas credenciais.');
+                }
+            } catch (error) {
+                console.error('Erro ao realizar o login:', error);
+                alert('Erro ao realizar o login. Tente novamente mais tarde.');
+            }
+        });
+    </script>
+    
 </body>
 </html>

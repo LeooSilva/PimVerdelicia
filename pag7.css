@@ -67,7 +67,6 @@ body, html {
 
 /* Logo */
 .logo {
-    width: 980px;
     text-align: center;
     margin-top: -290px;
     background-color: transparent;
@@ -166,10 +165,10 @@ span {
 
 .icon-container {
     display: flex;
-    justify-content: space-around;
+    justify-content: space-evenly;
     width: 100%;
     transition: transform 300ms ease-in-out, box-shadow 300ms ease-in-out;
-
+    margin-left: -80px;
 }
 
 .icon-item {

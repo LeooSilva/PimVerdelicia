@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Cadastre-se </title>
+    <title>Cadastre-se</title>
     <link rel="stylesheet" href="pag3.css">
 </head>
 <body>
@@ -15,39 +15,37 @@
     </div>
 
     <div id="container">
-        <h1 class="containerh1">
-            Crie sua conta!
-        </h1>
+        <h1 class="containerh1">Crie sua conta!</h1>
 
         <div class="facalog">
-            <a  class="link"  href="pag2.html">Já é registrado? Entre aqui</a>
+            <a class="link" href="pag2.html">Já é registrado? Entre aqui</a>
         </div>
 
-        <div class="containerforms">
-            <label for="nome">  Nome</label> 
-            <input type="text" name="nome" id="nome">
+        <form id="cadastro-form">
+            <div class="containerforms">
+                <label for="nome">Nome</label> 
+                <input type="text" name="nome" id="nome" required>
 
-        <label for="email"> Email</label> 
-        <input type="email" name="email" id="email">
+                <label for="email">Email</label> 
+                <input type="email" name="email" id="email" required>
 
-            <label for="senha">  Senha</label> 
-            <input type="password" name="senha" id="senha">
-            
+                <label for="senha">Senha</label> 
+                <input type="password" name="senha" id="senha" required>
 
-            <label  for="confirmar-senha"> <span>Confirmar senha</span> </label> 
-            <input type="password" name="confirmar-senha" id="confirmar-senha">
+                <label for="confirmar-senha">Confirmar senha</label> 
+                <input type="password" name="confirmar-senha" id="confirmar-senha" required>
 
-            <label for="telefone">Telefone</label> 
-            <input type="tel" name="telefone" id="telefone" placeholder="(XX) XXXXX-XXXX">
+                <label for="telefone">Telefone</label> 
+                <input type="tel" name="telefone" id="telefone" placeholder="(XX) XXXXX-XXXX" required>
 
-
-
-            <div class="container-btn">
-                <a  href="pag4.html" class="btn  text">Próximo</a>
+                <div class="container-btn">
+                    <button type="submit" class="btn text">Próximo</button>
                 </div>
+            </div>
+        </form>
+        
+    </div>
 
-        </div>
-
-
+    <script src="public/cadastro.js"></script> <!-- Certifique-se de que o arquivo está em uma pasta 'public' -->
 </body>
 </html>

@@ -5,7 +5,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Cadastro</title>
     <link rel="stylesheet" href="pag4.css">
-    
 </head>
 <body>
 
@@ -16,40 +15,29 @@
     </div>
 
     <div id="container">
+        <h1 class="containerh1">Continue seu cadastro!</h1>
+        <form id="form-cadastro-etapa2">
+            <div class="containerforms">
+                <label for="endereco">Endereço</label> 
+                <input type="text" name="endereco" id="endereco" required>
 
-        <h1 class="containerh1">
-            Continue seu cadastro!
-        </h1>
+                <label for="complemento">Complemento</label> 
+                <input type="text" name="complemento" id="complemento">
 
-        <div class="containerforms">
-            <label for="endereço">Endereço</label> 
-            <input type="text" name="endereço" id="endereço">
+                <label for="cep">CEP</label> 
+                <input type="text" name="cep" id="cep" placeholder="XXXXX-XXX" required>
 
-        <label for="complemento">Complemento</label> 
-        <input type="complemento" name="complemento" id="complemento">
+                <label for="cpf">CPF/CNPJ</label> 
+                <input type="text" name="cpf" id="cpf" placeholder="XXX.XXX.XXX-XX" required>
 
-            <label for="CEP">CEP</label> 
-            <input type="text" name="CEP" id="CEP" placeholder="XXXXX-XXX">
-            
-
-            <label  for="confirmar-senha">CPF/CNPJ</label> 
-            <input type="text" name="CPF" id="CPF" placeholder="XXX.XXX.XXX-XX">
-
-            <div class="container-foto">
-            <input  class="botao-foto" type="file" id="uploadFoto" style="display:none;" accept="image/*">
-            <button type="button" id="botaoFoto" class="botao-foto">Adicionar Foto</button>
-            </div>
-
-            <div class="container-btn">
-                <a  href="pag5.html" class="btn  text">Inscrever-se</a>
+                <div class="container-btn">
+                    <button type="submit" class="btn text">Inscrever-se</button>
                 </div>
-
-                <script>
-                    document.getElementById('botaoFoto').addEventListener('click', function() {
-                        document.getElementById('uploadFoto').click();
-                    });
-                </script>
-                
+            </div>
+        </form>
     </div>
+
+    <script src="public/cadastro-etapa2.js"></script>
+
 </body>
 </html>
