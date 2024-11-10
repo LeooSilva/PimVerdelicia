@@ -29,3 +29,13 @@ Este é um projeto de exemplo com login e cadastro usando Node.js e SQLite.
 Execute o seguinte comando para iniciar o servidor:
 ```bash
 node app.js
+
+## Como criar o banco de dados
+
+1. Instale o SQLite, se ainda não tiver.
+
+2. No terminal, navegue até a pasta do projeto e crie o banco de dados usando o comando:
+
+   ```bash
+   sqlite3 verdelicia.db < schema.sql
+
