@@ -180,26 +180,26 @@ img {
 
 
 
-@media (min-width: 376px) and (max-width: 430px) {
+@media (max-width: 480px) {
     /* Estilos para telas entre 376px e 425px */
     .lkk {
         position: relative;
-        top: 35%;
+        top: 27%;
     }
 
     .container-btn {
         position: relative;
-        top: 32%;
+        top: 24%;
     }
 
     .containercheck {
         position: relative;
-        top: 28%;
+        top: 21%;
     }
 
     .containerforms{
         position: relative;
-        top: 23%;
+        top: 18%;
     }
 
     .facalog {
@@ -216,13 +216,14 @@ img {
 }
 
 
-@media (min-width: 768px) and (max-width: 1024px) {
+@media (min-width: 481px) and (max-width: 850px) {
     /* Estilos para tablets entre 768px e 1024px */
 
     #container {
         width: 100%;
         height: 740px;
         position: relative;
+        margin-top: -4em;
         
     }
     .lkk {
