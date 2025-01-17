@@ -25,6 +25,10 @@ img{
     display: inline-block;
 }
 
+.container-img{
+    height: 10em;
+}
+
 .container-btn{
     background-color: #9DCC59;
     width: 23em;
