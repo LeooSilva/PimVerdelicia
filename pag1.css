@@ -95,8 +95,8 @@ img{
   @media (min-width: 851px) and (max-width: 2100px){
 
 img{
-    height: 20em;
-    width: auto;
+    height: auto;
+    width: 13em;
     background-color: rgba(127, 255, 212, 0);
 }
 
