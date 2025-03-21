@@ -13,14 +13,15 @@ body{
     display: flex;
     flex-direction: column;
     align-items: center;
+    margin-top: 2em;
 }
 
 
 img{
-    height: 20em;
-    width: 22em;
+    height: 15em;
+    width: 15em;
     position: relative;
-    bottom: -18.5em;
+    bottom: -20.5em;
     margin-bottom: 17.3em;
     display: inline-block;
 }
@@ -70,8 +71,11 @@ img{
 @media (min-width: 481px) and (max-width: 850px) {
     /* Estilos para tablets */
 
+.container-principal{
+    }
+
 img{
-    height: 30em;
+    height: 25em;
     width: auto;
     margin-top: 17em;
 }
