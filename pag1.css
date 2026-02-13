@@ -1,151 +1,138 @@
-
-    /* Estilos para tablets e celulares grandes */
-  *{
-    box-sizing: border-box;
-    margin: 0%;
-    padding: 0%;
+/* RESET */
+*{
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
 }
 
 body{
-    background-color: #F2FADB;
-}
-.container-principal {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    margin-top: 2em;
+  background-color: #F2FADB;
+  font-family: Arial, Helvetica, sans-serif;
+  color: #262626;
 }
 
-
-img{
-    height: 15em;
-    width: 15em;
-    position: relative;
-    bottom: -20.5em;
-    margin-bottom: 17.3em;
-    display: inline-block;
+/* CONTAINER PRINCIPAL */
+.container-principal{
+  min-height: 100vh;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 40px 20px;
+  gap: 22px;
 }
 
-.container-img{
-    height: 10em;
+/* BLOCO OLÁ / BEM VINDO */
+.bemvindo{
+  text-align: left; /* Faz Olá e Bem Vindo começarem juntos */
+  color: #9DCC59;
+  margin-right: 6%;
+  margin-top: 15%;
 }
 
+#titulo1,
+#titulo2{
+  font-size: clamp(3rem, 5vw, 3rem);
+  line-height: 1.05;
+}
+
+/* TEXTO */
+.paragrafo{
+  width: min(520px, 100%);
+  text-align: center;
+  font-size: clamp(1.1rem, 4.2vw, 1.8rem);
+  font-weight: bold;
+  line-height: 1.4;
+}
+span{
+    margin-right: 20%;
+}
+
+/* BOTÃO */
 .container-btn{
-    background-color: #9DCC59;
-    width: 23em;
-    height: 3.7em;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    border-radius: 1.1em;
-    margin-top: 12em;
-    margin-bottom: -16em;
+  width: min(420px, 100%);
+  background-color: #9DCC59;
+  border-radius: 18px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 14px;
+  transition: 0.3s;
+}
+
+.container-btn:hover{
+  transform: scale(1.03);
 }
 
 .btn{
-    text-align: center;
-    font-size: 1.5em;
-    text-decoration: none;
-    font-weight: bold;
-    color: #F8FCF4;
+  width: 100%;
+  text-align: center;
+  font-size: clamp(1.2rem, 3vw, 1.6rem);
+  text-decoration: none;
+  font-weight: bold;
+  color: #F8FCF4;
 }
 
-.paragrafo{
-    font-size: 1.5em;
-    margin-top: 7em;
-    margin-bottom: -5em;
-    font-weight: bold;
-    color: #262626;
-}
-
-
-.bemvindo{
-    font-size: 2em;
-    margin-top: 20px;
-    margin-bottom: -5em;
-    margin-left: -0.5em;
-    line-height: 1;
-    color: #9DCC59;
-}
-
-@media (min-width: 481px) and (max-width: 850px) {
-    /* Estilos para tablets */
-
-.container-principal{
-    }
-
-img{
-    height: 25em;
-    width: auto;
-    margin-top: 17em;
-}
-
-.container-btn{
-    margin-top: 15em;
-    margin-bottom: -35em;
-    width: 30em;
-    height: 5em;
-}
-
-.paragrafo{
-    font-size: 2em;
-    margin-top: 16em;
-    margin-right: 1em;
-}
-
-.bemvindo{
-    font-size: 3em;
-    margin-bottom: -10em;
-    margin-top: 3em;
-}
-  }
-
-  @media (min-width: 851px) and (max-width: 2100px){
-
-img{
-    height: auto;
-    width: 10em;
-    margin-top: -20em;
-}
+/* LOGO */
 .container-img{
-    height: 10em;
-    margin-top: 20em;
-
-}
-.container-btn{
-    width: 30em;
-    height: 4em;
-    margin-top: 13em;
-    margin-bottom: -18em;
+  margin-top: -10px;
+  display: flex;
+  justify-content: center;
 }
 
-.paragrafo{
-    font-size: 2em;
-    margin-right: 1em;
-    margin-top: 8em;
-}
-.bemvindo{
-    font-size: 3em;
+.container-img img{
+  width: min(320px, 75vw); /* Logo maior */
+  height: auto;
 }
 
+/* ---------------- TABLET ---------------- */
+@media (min-width: 600px){
+
+  .container-principal{
+    gap: 28px;
   }
 
-  
+  .container-img img{
+    width: 340px;
+  }
 
+  .container-btn{
+    width: 480px;
+  }
 
+}
 
+/* ---------------- DESKTOP ---------------- */
+@media (min-width: 1024px){
 
+  .container-principal{
+    max-width: 1100px;
+    margin: 0 auto;
+  }
 
+  .container-img img{
+    width: 380px; /* Logo maior no desktop */
+    margin-left: 15%;
+  }
 
+  .container-btn{
+    width: 550px;
+    margin-left: 10%;
+  }
 
+  .bemvindo{
+  text-align: left; /* Faz Olá e Bem Vindo começarem juntos */
+  color: #9DCC59;
+  margin-left: 18%;
+  margin-top: 3%;
+}
 
+#titulo1,
+#titulo2{
+  font-size: clamp(7rem, 5vw, 3rem);
+  line-height: 1.05;
+}
 
-
-
-
-
-
-
-
-
+}
   
