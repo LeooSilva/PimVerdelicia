@@ -1,27 +1,35 @@
 * {
     margin: 0;
     padding: 0;
-    overflow: hidden;
+    box-sizing: border-box;
 }
 
 body {
     background-color: #96c434;
+    font-family: Arial, sans-serif;
+    overflow: hidden;
 }
 
-
-    #container {
-        z-index: -1;
-        width: 100%;
-        height: 100vh;
-        margin-top: 120px;
-        background-color: rgb(252, 252, 217);
-        border-radius: 0 130px 0 0;
-    }
+/* Container principal */
+#container {
+    width: 100%;
+    min-height: calc(100vh - 110px);
+    margin-top: 30%;
+    background-color: #F5F7D9;
+    border-radius: 90px 0 0 0;
+    padding-top: 15%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+     position: relative;
+    min-height: 100vh;
+}
 
     h1 {
         background-color: rgba(0, 255, 255, 0);
-        font-size: 50px;
+        font-size: 35px;
         text-align: center;
+        margin-bottom: 10%;
         position: relative;
         
     }
@@ -58,7 +66,6 @@ img {
 .containerforms{
     background-color: rgba(0, 0, 0, 0);
     position: relative;
-    margin-top: 30px;
     display: flex; /*ativa o flexbox para alinhar os itens*/
     flex-direction: column; /* organiza os itens verticalmente, um embaixo do outro */
     justify-content: center; /*centralizou horizontalmente*/
@@ -70,6 +77,9 @@ input {
     background-color: rgba(0, 255, 255, 0);
     width: 230px;
     height: 40px;
+    margin-top: 25%;
+    padding-left: 5px;
+    margin-bottom: 5%;
     border-radius: 12px;
     background-color: #CDD1BE;
     border: 1px solid #CDD1BE ;
@@ -112,27 +122,26 @@ input {
 }
    
 .container-voini {
-    background-color: #067302;
-    display: flex;
-    justify-content: center;
-    margin-top: 15px;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    margin-bottom: 30%;
 }
 
 .barravoltar {
-    background-color: #96c434;
     width: 100%;
-    height: 50px;
-    line-height: 50px; /* Centraliza o texto verticalmente */
-    text-align: center;
+    height: 60px;
+    background-color: #96c434;
     color: #067302;
     text-decoration: none;
-    border: 1px solid #00000000;
-    font-family: Arial, sans-serif; /* Garanta que a fonte seja consistente */
-    font-size: 16px; /* Ajuste conforme necessário */
-    display: flex;
-    justify-content: center; /* Centraliza horizontalmente */
-    align-items: flex-end;   /* Alinha ao fundo verticalmente */
+    font-family: Arial, sans-serif;
+    font-size: 16px;
+    font-weight: bold;
 
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 @keyframes Grow {
@@ -146,88 +155,3 @@ input {
 
 
 
-@media (min-width: 376px) and (max-width: 430px) {
-    /* Estilos para telas entre 376px e 425px */
-    .container-voini {
-        margin-top: 30%;
-    }
-    .barravoltar {
-        background-color: #96c434;
-        width: 100%;
-        height: 65px;
-        line-height: 70px; /* Centraliza o texto verticalmente */
-    }
-    .btn {
-        position: relative;
-        top: 0%;
-    }
-    #container {
-        margin-top: 130px;
-    }
-
-    .containerforms{
-        margin-top: 100px;
-    }
-    .container-voini {
-        margin-top: 45px;
-    }
-    
-}
-
-
-@media (min-width: 768px) and (max-width: 1024px) {
-    /* Estilos para tablets entre 768px e 1024px */
- 
-    .container-voini {
-        margin-top: 0%;
-    }
-    .barravoltar {
-        background-color: #96c434;
-        width: 100%;
-        height: 65px;
-        line-height: 70px; /* Centraliza o texto verticalmente */
-        position: relative;
-
-    }
-    .btn {
-        position: relative;
-        top: 0%;
-        width: 40%;
-        height: 50px;
-    }
-    #container {
-        margin-top: 130px;
-    }
-
-    .containerforms{
-        margin-top: 240px;
-        
-    }
-    .container-voini {
-        margin-top: 125px;
-    }
-    input {
-        width: 40%;
-        height: 50px;
-    }
-    .p2{
-        font-size: 25px;
-        margin-top: 20%;
-        margin-bottom: -23%;
-    }
-    .prbl {
-        font-size: 30px;
-        position: relative;
-        bottom: -130px;
-    }
-    img {
-        position: relative;
-        top: 75px;
-        height: 250px;
-    }
-    .containercadeado {
-        margin-top: -90px;
-        margin-bottom: -5%;
-    }
-
-}
